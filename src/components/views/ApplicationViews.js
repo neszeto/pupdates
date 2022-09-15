@@ -8,7 +8,9 @@ import { ViewFullProfile } from "../profiles/ViewFullProfile"
 
 
 export const ApplicationViews = () => {
-	return (
+   
+     
+    return (
         <Routes>
             <Route path="/" element={
                 <>
