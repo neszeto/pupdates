@@ -19,10 +19,6 @@ export const FindPupdate = () => {
         }, 
         []
     )
-    const ViewFullProfileButton = (dogId) => {
-        return <ViewFullProfile dogId = {dogId}/>
-        
-    }
    
     
     return <>

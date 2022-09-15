@@ -7,6 +7,9 @@ export const ViewFullProfile = () => {
     const [dogs, setDogs] = useState([])
     const [users, setUsers] = useState([])
 
+    const localPupUser = localStorage.getItem("pup_user")
+    const pupUserObject = JSON.parse(localPupUser)
+
     useEffect(
         () => {
             getAllDogs()
@@ -55,7 +58,11 @@ export const ViewFullProfile = () => {
                 }
             </div>
         </article>
-        <button>Schedule Pupdate</button>
+        {
+            pupUserObject.id === foundDog?.userId
+            ? ""
+            : <button>Schedule Pupdate</button>
+        }
     </>
     
 }

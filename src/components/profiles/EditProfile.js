@@ -107,7 +107,23 @@ export const EditProfile = () => {
             )
         }
 
+    const DeleteProfileButton = (event) => {
+        event.preventDefault()
 
+        fetch(`http://localhost:8088/users/${pupUserObject.id}`, {
+            method: "DELETE"
+
+        })
+        fetch(`http://localhost:8088/dogs/${foundDogId}`, {
+            method: "DELETE"
+        })
+        .then(
+            () => {
+                navigate("/login") //login
+            }
+        )
+
+    }
 
 
     return <>
@@ -244,7 +260,12 @@ export const EditProfile = () => {
                 }
             }>Update Profile</button>
         </form>
-        <button>Delete Profile</button>
+        <button
+        onClick={
+            (evt) => {
+                DeleteProfileButton(evt)
+            }
+        }>Delete Profile</button>
     </>
 }
 
