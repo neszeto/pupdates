@@ -61,6 +61,7 @@ export const MyProfile = () => {
                 <div className="dog">
                     <img src={foundDog?.image} width="300px" alt=""></img>
                     <section className="dog_info">
+                        <div>Name: {foundDog?.name}</div>
                         <div>Breed: {foundDog?.breed}</div>
                         <div>Age: {foundDog?.ageGroup?.age}</div>
                         <div>Size: {foundDog?.size?.size}</div>

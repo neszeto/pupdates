@@ -24,14 +24,10 @@
     -when submit button clicked, invoke create profile function above
 
 
-     name: "",
-            email: "",
-            pupSitting: false,
-            aboutMe: ""
-
 */
 
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { getAllAgeGroups, getAllEnergyLevels, getAllSizes } from "../ApiManager"
 
 
@@ -43,7 +39,6 @@ export const CreateProfile = () => {
             breed: "",
             aboutMe: "",
             image: "",
-            userId: 0,
             sizeId: 0,
             energyLevelId: 0,
             ageGroupId: 0
@@ -59,6 +54,8 @@ export const CreateProfile = () => {
 
     const localPupUser = localStorage.getItem("pup_user")
     const pupUserObject = JSON.parse(localPupUser)
+
+    let navigate = useNavigate()
     
     
     useEffect(
@@ -91,7 +88,53 @@ export const CreateProfile = () => {
         },
         []
     )
-    
+  
+
+    const CreateProfileButton = (event) => {
+        event.preventDefault()
+
+        const updatedUserToSendToAPI = {
+            name: user.name,
+            email: user.email,
+            pupSitting: user.pupSitting,
+            aboutMe: user.aboutMe
+        }
+
+        return fetch(`http://localhost:8088/users/${pupUserObject.id}`, {
+            method: "PUT", 
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(updatedUserToSendToAPI)
+        })
+        .then(response => response.json())
+        .then(
+            (updatedUserObject) => {
+                const dogToSendToAPI = {
+                    name: dog.name,
+                    breed: dog.breed,
+                    aboutMe: dog.aboutMe,
+                    image: dog.image,
+                    userId: updatedUserObject.id,
+                    sizeId: dog.sizeId,
+                    energyLevelId: dog.energyLevelId,
+                    ageGroupId: dog.ageGroupId
+                }
+                return fetch(`http://localhost:8088/dogs`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(dogToSendToAPI)
+                })
+        })
+        .then(response=>response.json())
+        .then(
+            () => {
+                navigate("/myprofile")
+            }
+        )
+    }
     
     
     return <>
@@ -224,7 +267,7 @@ export const CreateProfile = () => {
             <button
             onClick={
                 (evt) => {
-                    
+                    CreateProfileButton(evt)
                 }
             }>Create Profile</button>
         </form>
