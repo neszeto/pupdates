@@ -1,0 +1,15 @@
+.dog_info{
+    display: flex;
+    flex-direction: column; 
+}
+
+
+.owner_info {
+    display: flex;
+    flex-direction: column; 
+}
+
+.text_field {
+    height: 150px;
+
+}

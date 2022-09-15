@@ -194,6 +194,8 @@ ViewFullProfile.js -----------
         -create a turnary key for pupsit sharing. If pupsit sharing is TRUE: display `interested...` on page. If FALSE: display "" (nothing)
     -create schedule pupdate button
 
+
+    ***STRETCH GOAL --STILL NEED TO IMPLEMENT****
 -create a function for schedule pupdate button
     -create a requestObject to send to API
         -should have initiatingDogId 
@@ -231,12 +233,5 @@ import pup_user
     -create default setting to click: false
     -create an onClick function for the Accept button, when clicked, change click: true 
         -IF true, then turnary key in html should display the contact info for initiatingDog Owner
-
-
-
-  
-
-    
-
 
  */
