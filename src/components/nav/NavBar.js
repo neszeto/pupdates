@@ -41,9 +41,13 @@ export const NavBar = () => {
                 ?   <li className="navbar_products">
                         <Link className="my_profile" to="/myprofile">My Profile</Link>
                     </li>
-                :   <li className="navbar_products">
+                :   <><li className="navbar_products">
                         <Link className="create_profile" to="/createprofile">Create Profile</Link>
                     </li> 
+                    <li className="navbar_products">
+                        <Link className="my_profile" to="/myprofile">My Profile</Link>
+                    </li>
+                    </>
             }
             
             <li className="navbar_logout">   

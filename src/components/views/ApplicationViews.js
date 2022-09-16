@@ -9,7 +9,7 @@ import { ViewFullProfile } from "../profiles/ViewFullProfile"
 
 
 export const ApplicationViews = () => {
-   
+    
      
     return (
         <Routes>
@@ -27,8 +27,8 @@ export const ApplicationViews = () => {
             <Route path="pendingpupdate" element={<PendingPupdate />} />
             <Route path="editprofile/:foundDogId" element={<EditProfile />} />
             <Route path="findpupdate" element={<FindPupdate />} />
-            <Route path="myprofile" element={<MyProfile />} />
             <Route path="fullprofile/:dogId" element={<ViewFullProfile />} />
+            <Route path="myprofile" element={<MyProfile />} />
             <Route path="createprofile" element={<CreateProfile />} />
         </Routes>
     )
