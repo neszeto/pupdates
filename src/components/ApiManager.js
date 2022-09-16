@@ -9,7 +9,10 @@
 */
 
 
-
+export const getAllDogsAndTheirUsers = () => {
+    return fetch (`http://localhost:8088/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel&_expand=user`)
+    .then (response => response.json())
+}
 
 export const getAllDogs = () => {
     return fetch(`http://localhost:8088/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel`)

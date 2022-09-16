@@ -3,6 +3,7 @@ import { CreateProfile } from "../profiles/CreateProfile"
 import { EditProfile } from "../profiles/EditProfile"
 import { FindPupdate } from "../profiles/FindPupdate"
 import { MyProfile } from "../profiles/MyProfile"
+import { PendingPupdate } from "../profiles/PendingPupdates"
 import { ViewFullProfile } from "../profiles/ViewFullProfile"
 
 
@@ -23,6 +24,7 @@ export const ApplicationViews = () => {
             }>	
                 
             </Route>
+            <Route path="pendingpupdate" element={<PendingPupdate />} />
             <Route path="editprofile/:foundDogId" element={<EditProfile />} />
             <Route path="findpupdate" element={<FindPupdate />} />
             <Route path="myprofile" element={<MyProfile />} />
@@ -31,3 +33,4 @@ export const ApplicationViews = () => {
         </Routes>
     )
 }
+

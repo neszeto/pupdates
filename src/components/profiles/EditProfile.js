@@ -119,7 +119,7 @@ export const EditProfile = () => {
         })
         .then(
             () => {
-                navigate("/login") //login
+                navigate("/register") 
             }
         )
 
@@ -140,7 +140,7 @@ export const EditProfile = () => {
                     }
                 }/>
                 <label htmlFor="dog_breed">Breed: </label>
-                <input requred autoFocus type="text" value={currentDogObject.breed}
+                <input requred autoFocus type="text" value={currentDogObject.breed} 
                 onChange = {
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -149,7 +149,7 @@ export const EditProfile = () => {
                     }
                 }/>
                 <label htmlFor="age">Age: </label>
-                <select id="age"
+                <select id="age" 
                 onChange={
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -159,7 +159,7 @@ export const EditProfile = () => {
                 }>
                     <option value="">{currentDogObject?.ageGroup?.age}</option>
                     {
-                        ages.map(age => <option value={age.id}>{age.age}</option>)
+                        ages.map(age => <option value={age.id} key={age.id}>{age.age}</option>)
                     }
                 </select>
                 <label htmlFor="size">Size: </label>
@@ -173,7 +173,7 @@ export const EditProfile = () => {
                 }>
                     <option value="">{currentDogObject?.size?.size}</option>
                     {
-                        sizes.map(size => <option value={size.id}>{size.size}</option> )
+                        sizes.map(size => <option value={size.id} key={size.id}>{size.size}</option> )
                     }
                 </select>
                 <label htmlFor="energy">Energy Level: </label>
@@ -187,7 +187,7 @@ export const EditProfile = () => {
                 }>
                 <option value="">{currentDogObject?.energyLevel?.energy}</option>
                     {
-                        energies.map(energy => <option value={energy.id}>{energy.energy}</option> )
+                        energies.map(energy => <option value={energy.id} key={energy.id}>{energy.energy}</option> )
                     }
                 </select>
                 <label htmlFor="about_dog">About Me: </label>

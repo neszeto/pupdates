@@ -1,33 +1,87 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getAllDogs } from "../ApiManager"
-import { ViewFullProfile } from "./ViewFullProfile"
+import { getAllDogsAndTheirUsers } from "../ApiManager"
+import Duke from "../assets/IMG_2408.JPG"
+
 
 
 export const FindPupdate = () => {
     const navigate = useNavigate()
     const [dogs, setDogs] = useState([])
 
+    const [search, setSearch] = useState("")
+    const [filteredDogs, setFiltered] = useState([])
+    const [pupsitButton, setButton] = useState(false)
+
     useEffect(
         () => {
-            getAllDogs()
+            getAllDogsAndTheirUsers()
             .then(
                 (dogsArray) => {
                     setDogs(dogsArray)
+                    setFiltered(dogsArray)
                 }
             )
         }, 
         []
     )
+
+    useEffect(
+        () => {
+            if (search) {
+                const searchedDog = dogs.filter(dog=>dog.name.toLowerCase().startsWith(search.toLowerCase()))
+                setFiltered(searchedDog)
+            }
+            else {
+                setFiltered(dogs)
+            }
+
+        }, 
+
+        [search]
+    )
    
+    useEffect(
+        () => {
+            if (pupsitButton) {
+                const pupsitDogArray = dogs.filter(dog=>dog.user.pupSitting === true)
+                setFiltered(pupsitDogArray)
+            }
+            else {
+                setFiltered(dogs)
+            }
+        },
+        [pupsitButton]
+    )
     
     return <>
+    <img src={Duke} alt="" width="200px"/>
         <h2>View All Profiles</h2>
-        <article>
+        <section className="search_filter">
+            <label htmlFor="search_profile">Search Profiles</label>
+            <input 
+            onChange={
+                (evt) => {setSearch(evt.target.value)}
+            }type="text" name="search_profiles" placeholder="enter dog's name..."/>
+            <button
+            onClick={
+                () => {
+                    setButton(true)
+                }
+            }>Pupsit Sharing Only</button>
+            <button
+            onClick={
+                () => {
+                    setButton(false)
+                }
+            }>All Profiles</button>
+
+        </section>
+        <section className="all_profiles">
             {
-                dogs.map(
+                filteredDogs.map(
                     (dog) => {
-                        return <>
+                        return <section key={dog.id}>
                         <div>"{dog.name}"</div>
                         <img src={dog.image} width="300px" alt=""></img>
                         <div className="dog_info">
@@ -45,12 +99,12 @@ export const FindPupdate = () => {
                                 
                             }
                         }>View Full Profile</button>
-                        </>
+                        </section>
                         
                     }
                 )
             }    
-        </article>
+        </section>
         </>
        
     

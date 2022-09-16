@@ -170,7 +170,7 @@ export const CreateProfile = () => {
                 }>
                     <option value="">Select Age Group</option>
                     {
-                        ages.map(age => <option value={age.id}>{age.age}</option>)
+                        ages.map(age => <option value={age.id} key={age.id}>{age.age}</option>)
                     }
                 </select>
                 <label htmlFor="size">Size: </label>
@@ -184,7 +184,7 @@ export const CreateProfile = () => {
                 }>
                     <option value="">Select Size</option>
                     {
-                        sizes.map(size => <option value={size.id}>{size.size}</option> )
+                        sizes.map(size => <option value={size.id} key={size.id}>{size.size}</option> )
                     }
                 </select>
                 <label htmlFor="energy">Energy Level: </label>
@@ -198,7 +198,7 @@ export const CreateProfile = () => {
                 }>
                 <option value="">Select Energy Level</option>
                     {
-                        energies.map(energy => <option value={energy.id}>{energy.energy}</option> )
+                        energies.map(energy => <option value={energy.id} key={energy.id}>{energy.energy}</option> )
                     }
                 </select>
                 <label htmlFor="about_dog">About Me: </label>

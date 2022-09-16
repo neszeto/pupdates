@@ -31,6 +31,9 @@ export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar_products">
+                <Link className="pending_pup" to="/pendingpupdate">Pending Pupdates</Link>
+            </li> 
+            <li className="navbar_products">
                 <Link className="find_pup" to="/findpupdate">Find a Pupdate</Link>
             </li> 
             {
