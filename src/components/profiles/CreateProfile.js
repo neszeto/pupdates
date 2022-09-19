@@ -29,7 +29,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllAgeGroups, getAllDogs, getAllEnergyLevels, getAllSizes } from "../ApiManager"
-import { NavBar } from "../nav/NavBar"
+
 
 
 
@@ -145,6 +145,25 @@ export const CreateProfile = () => {
         )
     }
 
+    const showWidget = (event) => {
+        event.preventDefault()
+    
+        let widget = window.cloudinary.createUploadWidget(
+            { 
+            cloudName: `pupdates`,
+            uploadPreset: `pup_uploads`
+            },
+        (error, result) => {
+          if (!error && result && result.event === "success") { 
+            console.log(result.info.url)
+            const copy = structuredClone(dog)
+            copy.image = result.info.url
+            setDog(copy)
+        }})
+        widget.open()
+      }
+
+
     let foundDog = dogs.find(dog => dog.userId === pupUserObject.id)
     
     if (pupUserObject && foundDog) {
@@ -224,15 +243,8 @@ export const CreateProfile = () => {
                            setDog(copy)
                        }
                    }/>
-                   <label htmlFor="upload">Upload Image: </label>
-                   <input required autoFocus type="file" accepts="image/*" multiple= "false" value={dog.image} 
-                   onChange={
-                       (evt) => {
-                           const copy = structuredClone(dog)
-                           copy.image = evt.target.value
-                           setDog(copy)
-                       }
-                   }/>
+                   <button className="uploadButton" onClick={(evt) => showWidget(evt)}>Upload Image</button>
+                   <img src={dog.image} width="100px"/>
                    <button>Add Pet</button>
                </fieldset>
                <fieldset className="owner_info">
@@ -285,7 +297,20 @@ export const CreateProfile = () => {
                    }
                }>Create Profile</button>
            </form>
+           
        </>
     }
 }
 
+
+/**
+ * <label htmlFor="upload">Upload Image: </label>
+                   <input required autoFocus type="file" accepts="image/*" multiple= "false" value={dog.image} 
+                   onChange={
+                       (evt) => {
+                           const copy = structuredClone(dog)
+                           copy.image = evt.target.value
+                           setDog(copy)
+                       }
+                   }/>
+ */

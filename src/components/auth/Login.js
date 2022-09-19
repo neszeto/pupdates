@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
+import "./Login.css"
 
 
 export const Login = () => {
@@ -28,29 +29,31 @@ export const Login = () => {
     }
 
     return (
-        <main className="container--login">
+        <main style={{height: '100vh'}} className="container--login">
+            <h1>Pup
+                <font color="#ff8c1a">dates</font>
+            </h1>
             <section>
-                <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Pupdates</h1>
+                <form className="form--login" onSubmit={handleLogin}> 
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label htmlFor="inputEmail" className="email">Email address </label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}
-                            className="form-control"
+                            className="email"
                             placeholder="Email address"
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button className="myButton" type="submit">
                             Sign in
                         </button>
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+            <section className="register_link">
+                <Link to="/register" >Not a member yet?</Link>
             </section>
         </main>
     )

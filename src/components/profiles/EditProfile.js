@@ -126,6 +126,23 @@ export const EditProfile = () => {
     }
 
 
+    const showWidget = (event) => {
+        event.preventDefault()
+
+        let widget = window.cloudinary.createUploadWidget(
+            { 
+            cloudName: `pupdates`,
+            uploadPreset: `pup_uploads`
+            },
+        (error, result) => {
+            if (!error && result && result.event === "success") { 
+            const copy = structuredClone(currentDogObject)
+            copy.image = result.info.url
+            setCurrentDog(copy)
+        }})
+        widget.open()
+    }
+
     return <>
         <form className="edit_form">
             <h2>Edit Your Profile</h2>
@@ -199,15 +216,8 @@ export const EditProfile = () => {
                         setCurrentDog(copy)
                     }
                 }/>
-                <label htmlFor="upload">Upload Image: </label>
-                <input required autoFocus type="text" value={currentDogObject.image} 
-                onChange={
-                    (evt) => {
-                        const copy = structuredClone(currentDogObject)
-                        copy.image = evt.target.value
-                        setCurrentDog(copy)
-                    }
-                }/>
+                <button className="uploadButton" value={currentDogObject.image} onClick={(evt) => showWidget(evt)}>Upload Image</button>
+                <img src={currentDogObject.image} width="100px"/>
                 <button>Add Pet</button>
             </fieldset>
             <fieldset className="owner_info">
@@ -268,7 +278,6 @@ export const EditProfile = () => {
         }>Delete Profile</button>
     </>
 }
-
 
 
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllDogsAndTheirUsers } from "../ApiManager"
+import "./FindPupdate.css"
 
 
 
@@ -54,7 +55,7 @@ export const FindPupdate = () => {
         [pupsitButton]
     )
     
-    return <>
+    return <article className="main_background">
         <h2>View All Profiles</h2>
         <section className="search_filter">
             <label htmlFor="search_profile">Search Profiles</label>
@@ -104,7 +105,7 @@ export const FindPupdate = () => {
                 )
             }    
         </section>
-        </>
+        </article>
        
     
 }

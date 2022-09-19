@@ -1,0 +1,105 @@
+
+/*title -----------------------------*/
+
+h1 {
+    color:#cc6600; 
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 100px;
+    margin-left: 175px;
+}
+
+/*background -------------------------*/
+.container--login {
+    
+    background-image: url("../assets/Golden-Retriever.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100%; 
+    overflow: hidden;
+    background-position: right;
+    
+    
+}
+
+/*login box--------------------------*/
+
+.form--login {
+    background-color: rgba(255,255,255, .5); /*allows background to be opaque while text is not*/
+    color: black; 
+    width: 600px;
+    height: 450px;
+    text-align: center; 
+    border: solid rgba(126, 151, 82, 0.5);
+    border-radius: 25px; 
+    position: relative;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding-top: 150px;
+    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    
+}
+
+
+fieldset { /*gets ride of lines*/
+    border:0; 
+}
+
+a:link {
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+h2 {
+    font-size: 35px; 
+    color: #331a00; 
+}
+
+.email {
+    font-size: 25px; 
+    color: #331a00;
+}
+
+label {
+    font-size: 25px; 
+}
+
+.myButton {
+    color: rgb(255, 255, 255); 
+    font-size: 25px; 
+    line-height: 29px; 
+    padding: 10px; 
+    border-radius: 26px; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(54, 77, 194) 0%, rgb(46,68, 177) 50%, rgb(41, 60, 162) 100%); 
+    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    border: 2px solid rgb(41, 60, 162); 
+    display: inline-block;
+
+}
+    .myButton:hover {
+    background: rgb(78, 104, 212); }
+    .myButton:active {
+    background: rgb(41, 60, 162); }
+
+/*register box ------------------------------*/
+
+.register_link {
+    background-color: rgba(255,255,255, .5);
+    color: black; 
+    text-align: center; 
+    width: 600px; 
+    height: 50px; 
+    border: solid rgba(126, 151, 82, 0.5);
+    border-radius: 25px;
+    margin-left: 100px; 
+    margin-top: 5px;
+    padding-top: 30px;
+    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    
+    
+}

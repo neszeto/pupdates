@@ -15,7 +15,7 @@ export const ApplicationViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Pupdates</h1>
+                    
                     <FindPupdate />
                     
 
@@ -26,7 +26,7 @@ export const ApplicationViews = () => {
             </Route>
             <Route path="pendingpupdate" element={<PendingPupdate />} />
             <Route path="editprofile/:foundDogId" element={<EditProfile />} />
-            <Route path="findpupdate" element={<FindPupdate />} />
+            <Route path="/" element={<FindPupdate />} />
             <Route path="fullprofile/:dogId" element={<ViewFullProfile />} />
             <Route path="myprofile" element={<MyProfile />} />
             <Route path="createprofile" element={<CreateProfile />} />

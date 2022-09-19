@@ -1,0 +1,66 @@
+
+
+
+
+.form--register {
+    
+    background-image: url("../assets/register.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100%; 
+    overflow: hidden;
+    background-position: left;
+    
+}
+
+.register_title {
+    color:#cc6600; 
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 40px; 
+    font-weight: bold;
+}
+
+.register {
+    background-color: rgba(255,255,255, .5);
+    border: solid rgba(192, 162, 132, .5);
+    text-align: center; 
+    width: 600px; 
+    margin: 150px; 
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: rgb(93, 92, 92) 5px 5px 15px 5px;
+    
+}
+
+.form-aboutMe {
+    width: 500px;
+    height: 100px; 
+}
+
+.form-control {
+    width: 200px;
+    height: 35px; 
+}
+
+.register_button {
+    color: rgb(255, 255, 255); 
+    font-size: 25px; 
+    line-height: 29px; 
+    padding: 10px; 
+    border-radius: 26px; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(54, 77, 194) 0%, rgb(46,68, 177) 50%, rgb(41, 60, 162) 100%); 
+    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    border: 2px solid rgb(41, 60, 162); 
+    display: inline-block;
+    
+}
+
+    .register_button:hover {
+    background: rgb(78, 104, 212); }
+    .register_button:active {
+    background: rgb(41, 60, 162); }
