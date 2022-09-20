@@ -31,7 +31,7 @@ export const Login = () => {
     return (
         <main style={{height: '100vh'}} className="container--login">
             <h1>Pup
-                <font color="#ff8c1a">dates</font>
+                <font color="#ff8c1a"><i>dates</i></font>
             </h1>
             <section>
                 <form className="form--login" onSubmit={handleLogin}> 

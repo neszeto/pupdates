@@ -1,5 +1,65 @@
-.main_background {
-    background: rgba(191, 219, 184); 
+.banner {
+    background-image: url("../assets/pups_running.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 100%; 
+    padding: 140px;
+    background-position: center;
+    color:#cc6600; 
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 75px;
+   
+}
+
+.all_profiles {
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    background-color: rgba(191, 219, 184);
 
 }
 
+
+.dog_profile {
+    border: solid rgba(191, 219, 184);
+    width: 400px;
+    text-align: center; 
+    margin: 20px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+
+h3 {
+   color: #cc6600;
+   font-size: 25px;
+}
+
+.sub_header {
+    display: flex;
+    justify-content: space-between;
+    border: solid black;
+
+}
+
+.search {
+    font-size: 20px;
+    
+}
+
+.search_filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.filter_buttons {
+    border: solid black;
+    align-items: center;
+    justify-content: center; 
+    padding-left: 1em; 
+
+}

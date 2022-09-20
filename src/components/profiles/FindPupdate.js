@@ -56,32 +56,41 @@ export const FindPupdate = () => {
     )
     
     return <article className="main_background">
-        <h2>View All Profiles</h2>
-        <section className="search_filter">
-            <label htmlFor="search_profile">Search Profiles</label>
-            <input 
-            onChange={
-                (evt) => {setSearch(evt.target.value)}
-            }type="text" name="search_profiles" placeholder="enter dog's name..."/>
-            <button
-            onClick={
-                () => {
-                    setButton(true)
-                }
-            }>Pupsit Sharing Only</button>
-            <button
-            onClick={
-                () => {
-                    setButton(false)
-                }
-            }>All Profiles</button>
-
+        <h2 className="banner">Pup
+            <font color="#ff8c1a"><i>dates</i></font>
+        </h2>
+        <section className="sub_header">
+            <h3>View All Profiles</h3>
+            <section className="search_filter">
+                <div className="search_input">
+                    <label className="search" htmlFor="search_profile">Search Profiles </label>
+                    <input 
+                    onChange={
+                        (evt) => {setSearch(evt.target.value)}
+                    }type="text" name="search_profiles" placeholder="enter dog's name..."/>
+                </div>
+                <div className="filter_buttons">
+                    <button
+                    onClick={
+                        () => {
+                            setButton(true)
+                        }
+                    }>Pupsit Sharing Only</button>
+                    <button
+                    onClick={
+                        () => {
+                            setButton(false)
+                        }
+                    }>All Profiles</button>
+                </div>
+            </section>
         </section>
+        
         <section className="all_profiles">
             {
                 filteredDogs.map(
                     (dog) => {
-                        return <section key={dog.id}>
+                        return <section className="dog_profile" key={dog.id}>
                         <div>"{dog.name}"</div>
                         <img src={dog.image} width="300px" alt=""></img>
                         <div className="dog_info">
