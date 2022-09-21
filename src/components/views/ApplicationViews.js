@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { LocalDogParks } from "../LocalDogParks"
 import { CreateProfile } from "../profiles/CreateProfile"
 import { EditProfile } from "../profiles/EditProfile"
 import { FindPupdate } from "../profiles/FindPupdate"
@@ -30,6 +31,7 @@ export const ApplicationViews = () => {
             <Route path="fullprofile/:dogId" element={<ViewFullProfile />} />
             <Route path="myprofile" element={<MyProfile />} />
             <Route path="createprofile" element={<CreateProfile />} />
+            <Route path="localParks" element={<LocalDogParks />} />
         </Routes>
     )
 }

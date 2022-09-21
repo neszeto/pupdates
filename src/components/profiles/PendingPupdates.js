@@ -30,6 +30,7 @@ import pup_user
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllDogs, getAllRequests, getAllUsers } from "../ApiManager"
+import "./PendingPupdates.css"
 
 
 
@@ -82,11 +83,11 @@ const pupUserObject = JSON.parse(localPupUser)
         requestsArray.map(
             (request) => {
                 const foundInitiatingDog = dogs.find(dog=> dog.id === request.initiatingDogId)
-                const foundInitiatingUser = users.find(user => user.id === foundInitiatingDog.userId)
+                const foundInitiatingUser = users.find(user => user?.id === foundInitiatingDog.userId)
 
-                return <section key={request.id}>
-                <div>"{foundInitiatingDog.name}" would like a playdate with "{foundRecievingDog.name}"
-                <button id={foundInitiatingDog.id}
+                return <section className="pupdate_request" key={request.id}>
+                <div className="text">"{foundInitiatingDog?.name}" would like a playdate with "{foundRecievingDog.name}"
+                <button id={foundInitiatingDog.id} className="contact_button"
                 onClick={
                     (evt) => {
                         const copy = structuredClone(accept)
@@ -95,7 +96,7 @@ const pupUserObject = JSON.parse(localPupUser)
                         setAccept(copy)
                     }
                 }>Show Contact</button>
-                <button id={request.id}
+                <button id={request.id} className="decline_button"
                 onClick={
                     () => {
                         fetch(`http://localhost:8088/requests/${request.id}`, {
@@ -111,10 +112,10 @@ const pupUserObject = JSON.parse(localPupUser)
                 }>Decline</button>
                 {
                     accept.click && accept.acceptButtonId === foundInitiatingDog.id
-                    ? <>
-                    <div>Contact {foundInitiatingDog.name}'s owner, {foundInitiatingUser.name}, to set up a playdate!</div> 
-                    <div>Email: {foundInitiatingUser.email}</div>
-                    </>
+                    ? <section className="contact_info">
+                    <div>Contact {foundInitiatingDog.name}'s owner <b>{foundInitiatingUser.name}</b>, to set up a playdate!</div> 
+                    <div><b>Email: </b>{foundInitiatingUser.email}</div>
+                    </section>
                     : ""
                 }
                 </div>

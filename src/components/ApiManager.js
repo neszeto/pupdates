@@ -43,3 +43,8 @@ export const getAllEnergyLevels = () => {
     return fetch(`http://localhost:8088/energyLevels`)
     .then(response => response.json())
 }
+
+export const getAllParks = () => {
+    return fetch(`http://localhost:8088/dogParks`)
+    .then(response=>response.json())
+}

@@ -24,9 +24,12 @@
 }
 
 .owner {
-    border: solid black; 
+    
     padding: 40px; 
-    margin: 20px; 
+    margin-left: 20px; 
+    margin-right: 200px; 
+    box-sizing: content-box; 
+    width: 200%; 
 }
 
 .dog_owner {

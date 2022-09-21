@@ -1,9 +1,9 @@
 .feedback {
-    border: 1px dotted cadetblue;
+    border: 1px dotted #26734d;
     padding: 1rem;
-    background-color: rgb(218, 230, 247);
+    background-color:#79d2a6;
     position: absolute;
-    top: 20%;
+    top: 60%;
     left: 50%;
     width: 70%;
     transform: translate(-50%, -50%);
@@ -26,6 +26,6 @@
     }
   
     100% {
-      top: 20%;
+      top: 60%;
     }
   }

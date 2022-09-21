@@ -58,7 +58,9 @@ export const NavBar = () => {
                     </li>
                     </>
             }
-            
+            <li className="navbar_products">
+                <Link className="link" to="/localParks">Local Dog Parks</Link>
+            </li>
             <li className="navbar_logout">   
                 <Link className="link" to="" 
                 onClick={
