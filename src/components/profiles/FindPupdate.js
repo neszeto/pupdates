@@ -60,23 +60,23 @@ export const FindPupdate = () => {
             <font color="#ff8c1a"><i>dates</i></font>
         </h2>
         <section className="sub_header">
-            <h3>View All Profiles</h3>
+            <h3>View All Profiles: </h3>
             <section className="search_filter">
                 <div className="search_input">
                     <label className="search" htmlFor="search_profile">Search Profiles </label>
                     <input 
                     onChange={
                         (evt) => {setSearch(evt.target.value)}
-                    }type="text" name="search_profiles" placeholder="enter dog's name..."/>
+                    }type="text" name="search_profiles" className="input_field" placeholder="enter dog's name..."/>
                 </div>
                 <div className="filter_buttons">
-                    <button
+                    <button className="sharing_button"
                     onClick={
                         () => {
                             setButton(true)
                         }
                     }>Pupsit Sharing Only</button>
-                    <button
+                    <button className="all_button"
                     onClick={
                         () => {
                             setButton(false)
@@ -91,16 +91,18 @@ export const FindPupdate = () => {
                 filteredDogs.map(
                     (dog) => {
                         return <section className="dog_profile" key={dog.id}>
-                        <div>"{dog.name}"</div>
-                        <img src={dog.image} width="300px" alt=""></img>
+                        <div className="dog_name">"{dog.name}"</div>
+                        <img className="image" src={dog.image} width="300px" alt=""></img>
                         <div className="dog_info">
-                            <div>Breed: {dog.breed}</div>
-                            <div>Age: {dog.ageGroup.age}</div>
-                            <div>Size: {dog.size.size}</div>
-                            <div>Energy Level: {dog.energyLevel.energy}</div>
-                            <div>About Me: {dog.aboutMe}</div>
+                            <div><b>Breed: </b>{dog.breed}</div>
+                            <div><b>Age: </b>{dog.ageGroup.age}</div>
+                            <div><b>Size: </b>{dog.size.size}</div>
+                            <div><b>Energy Level: </b>{dog.energyLevel.energy}</div>
                         </div>
-                        <button id={dog.id}
+                        <div className="aboutMe">
+                            <div><b>About Me: </b>{dog.aboutMe}</div>
+                        </div>
+                        <button id={dog.id} className="view_button"
                         onClick ={
                             (evt) => {
                                 let dogId = evt.target.id

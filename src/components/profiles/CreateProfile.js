@@ -29,6 +29,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllAgeGroups, getAllDogs, getAllEnergyLevels, getAllSizes } from "../ApiManager"
+import "./EditProfile.css"
 
 
 
@@ -170,12 +171,12 @@ export const CreateProfile = () => {
         return <div>Your profile has already been created</div>
     }
     else {
-        return <>
-        <form className="create_form">
-               <h2>Create Your Profile</h2>
-               <fieldset className="dog_info">
-                   <label htmlFor="dog_name">Dog's Name: </label>
-                   <input required autoFocus type="text" value={dog.name} 
+        return <section className="whole_page">
+        <form className="edit_form">
+               <div className="edit_header">Create Your Profile</div>
+               <fieldset className="dogform_info">
+                   <label className="form_headers" htmlFor="dog_name">Dog's Name: </label>
+                   <input className="form_headers" required autoFocus type="text" value={dog.name} 
                    onChange = {
                        (evt) => {
                            const copy = structuredClone(dog)
@@ -183,7 +184,7 @@ export const CreateProfile = () => {
                            setDog(copy)
                        }
                    }/>
-                   <label htmlFor="dog_breed">Breed: </label>
+                   <label className="form_headers" htmlFor="dog_breed">Breed: </label>
                    <input requred autoFocus type="text" value={dog.breed}
                    onChange = {
                        (evt) => {
@@ -192,7 +193,7 @@ export const CreateProfile = () => {
                            setDog(copy)
                        }
                    }/>
-                   <label htmlFor="age">Age: </label>
+                   <label className="form_headers" htmlFor="age">Age: </label>
                    <select id="age"
                    onChange={
                        (evt) => {
@@ -206,7 +207,7 @@ export const CreateProfile = () => {
                            ages.map(age => <option value={age.id} key={age.id}>{age.age}</option>)
                        }
                    </select>
-                   <label htmlFor="size">Size: </label>
+                   <label className="form_headers" htmlFor="size">Size: </label>
                    <select id="size"
                    onChange={
                        (evt) => {
@@ -220,7 +221,7 @@ export const CreateProfile = () => {
                            sizes.map(size => <option value={size.id} key={size.id}>{size.size}</option> )
                        }
                    </select>
-                   <label htmlFor="energy">Energy Level: </label>
+                   <label className="form_headers" htmlFor="energy">Energy Level: </label>
                    <select id="energy"
                    onChange={
                        (evt) => {
@@ -234,7 +235,7 @@ export const CreateProfile = () => {
                            energies.map(energy => <option value={energy.id} key={energy.id}>{energy.energy}</option> )
                        }
                    </select>
-                   <label htmlFor="about_dog">About Me: </label>
+                   <label className="form_headers_aboutMe" htmlFor="about_dog">About Me: </label>
                    <textarea id="about_dog" className="text_field" value={dog.aboutMe}
                    onChange={
                        (evt) => {
@@ -243,12 +244,17 @@ export const CreateProfile = () => {
                            setDog(copy)
                        }
                    }/>
-                   <button className="uploadButton" onClick={(evt) => showWidget(evt)}>Upload Image</button>
-                   <img src={dog.image} width="100px"/>
-                   <button>Add Pet</button>
+                    <div className="upload_preview">
+                        <button className="form_upload_button" onClick={(evt) => showWidget(evt)}>Upload Image</button>
+                        <div>Image Preview: </div>
+                        <img src={dog.image} width="100px"/>
+                    </div>
+                    <div className="add_pet_box">
+                        <button className="add_button">Add Pet</button>
+                    </div>
                </fieldset>
                <fieldset className="owner_info">
-                   <label htmlFor="owner_name">Your Name: </label>
+                   <label className="form_headers" htmlFor="owner_name">Your Name: </label>
                    <input required autoFocus type="text" value={user.name} 
                    onChange={
                        (evt) => {
@@ -257,7 +263,7 @@ export const CreateProfile = () => {
                            setUser(copy)
                        }
                    }/>
-                   <label htmlFor="about_owner">About Me: </label>
+                   <label className="form_headers" htmlFor="about_owner">About Me: </label>
                    <textarea id="about_owner" className="text_field" value={user.aboutMe}
                    onChange={
                        (evt) => {
@@ -266,7 +272,7 @@ export const CreateProfile = () => {
                            setUser(copy)
                        }
                    }/>
-                   <label htmlFor="email">Email: </label>
+                   <label className="form_headers" htmlFor="email">Email: </label>
                    <input required autoFocus type="text" value={user.email} 
                    onChange={
                        (evt) => {
@@ -275,7 +281,7 @@ export const CreateProfile = () => {
                            setUser(copy)
                        }
                    }/>
-                   <label htmlFor="pupsit">Interested in Pupsit Sharing
+                   <label className="form_headers" htmlFor="pupsit">Interested in Pupsit Sharing
                    <input id="pupsit" type="checkbox" checked={user.pupSitting? "checked" : ""} //prepopulates with what user choose at registration
                    onChange ={ 
                        () => {
@@ -298,7 +304,7 @@ export const CreateProfile = () => {
                }>Create Profile</button>
            </form>
            
-       </>
+       </section>
     }
 }
 

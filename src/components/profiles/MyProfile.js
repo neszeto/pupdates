@@ -20,6 +20,7 @@ ELSE return msg that reads "YOUR PROFILE HAS BEEN DELETED"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllDogs, getAllUsers } from "../ApiManager"
+import "./MyProfile.css"
 
 
 export const MyProfile = () => {
@@ -55,39 +56,41 @@ export const MyProfile = () => {
     
     
     if (pupUserObject && foundDog) { 
-        return <>
-            <h2> My Profile</h2>
-            <article>
+        return <section className="profile_page">
+            <div className="my_profile">My Profile</div>
+            <article className="dog_owner">
                 <div className="dog">
-                    <img src={foundDog?.image} width="300px" alt=""></img>
-                    <section className="dog_info">
-                        <div>Name: {foundDog?.name}</div>
-                        <div>Breed: {foundDog?.breed}</div>
-                        <div>Age: {foundDog?.ageGroup?.age}</div>
-                        <div>Size: {foundDog?.size?.size}</div>
-                        <div>Energy Level: {foundDog?.energyLevel?.energy}</div>
-                        <div>About Me: {foundDog?.aboutMe}</div>
+                    <img className="profile_image" src={foundDog?.image} width="500px" alt=""></img>
+                    <section className="dog_stats">
+                        <div><b>Name: </b>{foundDog?.name}</div>
+                        <div><b>Breed: </b>{foundDog?.breed}</div>
+                        <div><b>Age: </b>{foundDog?.ageGroup?.age}</div>
+                        <div><b>Size: </b>{foundDog?.size?.size}</div>
+                        <div><b>Energy Level: </b>{foundDog?.energyLevel?.energy}</div>
+                        <div className="profile_aboutMe"><b>About Me: </b>{foundDog?.aboutMe}</div>
                     </section>
                 </div>
                 
-                <div className="owners">
-                    <div>{foundDog?.name}'s Human: {foundUser?.name}</div>
-                    <div>About Me: {foundUser?.aboutMe}</div>
+                <div className="owner">
+                    <div><b>{foundDog?.name}'s Human: </b>{foundUser?.name}</div>
+                    <div className="profile_aboutMe"><b>About Me: </b>{foundUser?.aboutMe}</div>
                     {
                         foundUser?.pupSitting
-                        ? <div>* Interested in Pupsit Sharing</div>
+                        ? <div className="interested_pupsit"><b>🐾 Interested in Pupsit Sharing</b></div>
                         : ""
                     }
                 </div>
             </article>
-            <button id={foundDog?.id}
-            onClick = {
-                (evt) => {
-                    let foundDogId = evt.target.id
-                    navigate(`/editprofile/${foundDogId}`)
-                }
-            }>Edit Profile</button>
-        </>
+            <article className="button_box">
+                <button id={foundDog?.id} className="edit_button"
+                onClick = {
+                    (evt) => {
+                        let foundDogId = evt.target.id
+                        navigate(`/editprofile/${foundDogId}`)
+                    }
+                }>Edit Profile</button>
+            </article>
+        </section>
     }
 
     else {

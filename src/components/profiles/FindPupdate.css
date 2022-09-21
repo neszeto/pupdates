@@ -2,12 +2,12 @@
     background-image: url("../assets/pups_running.jpeg");
     background-repeat: no-repeat; 
     background-size: cover; 
-    height: 100%; 
     padding: 140px;
     background-position: center;
     color:#cc6600; 
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 75px;
+    margin: 0px; 
    
 }
 
@@ -15,31 +15,33 @@
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
-    background-color: rgba(191, 219, 184);
+    margin: 5px;
+    background-color: #fff2e6;
 
 }
 
 
 .dog_profile {
-    border: solid rgba(191, 219, 184);
+    border: solid #cc6600; 
     width: 400px;
     text-align: center; 
     margin: 20px;
     border-radius: 25px;
     background-color: white;
+    box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
 }
 
 
 h3 {
    color: #cc6600;
    font-size: 25px;
+   margin-left: 40px; 
 }
 
 .sub_header {
     display: flex;
     justify-content: space-between;
-    border: solid black;
+  
 
 }
 
@@ -57,9 +59,71 @@ h3 {
 }
 
 .filter_buttons {
-    border: solid black;
+    
     align-items: center;
     justify-content: center; 
     padding-left: 1em; 
+
+}
+
+.sharing_button {
+    padding: 5px;
+    color: white;
+    background-color:#cc6600; 
+    box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
+}
+
+.all_button {
+    padding: 5px;
+    margin-left: 5px; 
+    margin-right: 40px;
+    color: white;
+    background-color: #cc6600; 
+    box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
+
+}
+
+.input_field {
+    padding: 5px; 
+}
+
+.dog_name {
+    font-size: 30px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #cc6600;
+    margin: 15px; 
+
+}
+
+.image {
+    border-radius: 25px;
+    margin-bottom: 15px; 
+ 
+    
+}
+
+.dog_info {
+     justify-content: center;
+     align-items: center; 
+     margin-bottom: 15px; 
+}
+
+.aboutMe {
+    margin-bottom: 30px; 
+    margin-left: 15px; 
+    margin-right: 15px; 
+    border: solid thin #cc6600; 
+    border-radius: 5px; 
+    padding: 5px; 
+
+}
+
+.view_button {
+    padding: 7px;
+    color: white;
+    background-color:#cc6600; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+   
 
 }

@@ -1,4 +1,13 @@
-.dog_info{
+
+
+.whole_page {
+    padding: 50px;
+    background-color: #fff2e6; 
+    
+}
+
+
+.dogform_info{
     display: flex;
     flex-direction: column; 
 }
@@ -12,4 +21,104 @@
 .text_field {
     height: 150px;
 
+}
+
+.edit_form {
+    width: 700px; 
+    border: solid thin black; 
+    box-shadow: rgb(114, 112, 112) 2px 2px 9px 2px;
+    padding: 10px; 
+    background-color:rgb(242, 241, 238); 
+}
+
+.form_headers {
+    font-size: 20px; 
+    margin: 5px; 
+    
+}
+
+.edit_header {
+    font-size: 30px; 
+    padding: 10px; 
+    text-align: center; 
+    color:#cc6600; 
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.add_button {
+    width: 130px; 
+    padding: 5px; 
+    background-color: #cc6600; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 6px; 
+}
+
+.form_upload_button {
+    width: 150px; 
+    height: 30px; 
+    background-color: rgb(60, 64, 67);
+    color: white; 
+    border-radius: 10px; 
+    padding: 1px; 
+  
+}
+
+.upload_preview {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px; 
+
+}
+
+.image_preview {
+    margin-left: 20px; 
+}
+
+.add_pet_box {
+    text-align: right; 
+    margin-top: 20px; 
+}
+
+.update_button_box {
+ 
+    text-align: center; 
+    padding: 20px; 
+}
+
+.update_button {
+    width: 130px; 
+    background-color: #cc6600; 
+    color: white; 
+    border-radius: 10px; 
+    padding: 9px; 
+    box-shadow: rgb(114, 112, 112) 2px 2px 9px 2px;
+
+}
+
+.delete_button_box {
+    text-align: left; 
+    margin-top: 50px; 
+    
+   
+}
+
+.delete_button {
+    width: 130px; 
+    background-color: rgb(143, 4, 11); 
+    color: white; 
+    border-radius: 10px; 
+    padding: 9px; 
+    font-size: 15px; 
+    
+}
+
+.create_about_dog {
+    margin-bottom: 100px; 
+}
+
+.text_field {
+    margin: 10px; 
+    border: solid thin black; 
 }

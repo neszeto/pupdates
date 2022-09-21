@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate} from "react-router-dom"
-import { getAllDogs } from "../ApiManager"
+import { getAllDogs, getAllUsers } from "../ApiManager"
 import "./NavBar.css"
+
 
 
 export const NavBar = () => {
@@ -12,6 +13,7 @@ export const NavBar = () => {
     let navigate = useNavigate()
 
     const [dogs, setDogs] = useState([])
+    const [users, setUsers]= useState([])
   
     useEffect(
         () => {
@@ -21,37 +23,44 @@ export const NavBar = () => {
                     setDogs(dogArray)
                 }
             )
+            getAllUsers()
+            .then(
+                (userArray) => {
+                    setUsers(userArray)
+                }
+            )
         }, 
         []
     )
 
-    
+    let foundUser = users.find(user => user.id === pupUserObject.id)
     let foundDog = dogs.find(dog => dog.userId === pupUserObject.id)
 
-    return (
+    return (<>
         <ul className="navbar">
+            <div className="greeting">Hello, <i>{foundUser?.name}!</i></div>
             <li className="navbar_products">
-                <Link className="pending_pup" to="/pendingpupdate">Pending Pupdates</Link>
+                <Link className="link" to="/pendingpupdate">Pending Pupdates</Link>
             </li> 
             <li className="navbar_products">
-                <Link className="find_pupdate" to="/">Find a Pupdate</Link>
+                <Link className="link" to="/">Find a Pupdate</Link>
             </li> 
             {
                 foundDog
                 ?   <li className="navbar_products">
-                        <Link className="my_profile" to="/myprofile">My Profile</Link>
+                        <Link className="link" to="/myprofile">My Profile</Link>
                     </li>
                 :   <><li className="navbar_products">
-                        <Link className="create_profile" to="/createprofile">Create Profile</Link>
+                        <Link className="link" to="/createprofile">Create Profile</Link>
                     </li> 
                     <li className="navbar_products">
-                        <Link className="my_profile" to="/myprofile">My Profile</Link>
+                        <Link className="link" to="/myprofile">My Profile</Link>
                     </li>
                     </>
             }
             
             <li className="navbar_logout">   
-                <Link className="navbar_link" to="" 
+                <Link className="link" to="" 
                 onClick={
                     () => {
                         localStorage.removeItem("pup_user")
@@ -59,5 +68,6 @@ export const NavBar = () => {
                     }}>Logout</Link>
             </li>
         </ul>
+        </>
     )
 }

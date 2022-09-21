@@ -74,39 +74,43 @@ export const ViewFullProfile = () => {
 
     return<>
         <div className={`${feedback.includes("Error") ? "error" : "feedback"} ${feedback === "" ? "invisible" : "visible"}`}>{feedback}</div>
-        <h2>{foundDog?.name}'s Profile</h2>
-        <article>
-            <div className="dog">
-                <img src={foundDog?.image} width="300px" alt=""></img>
-                <section className="dog_info">
-                    <div>Breed: {foundDog?.breed}</div>
-                    <div>Age: {foundDog?.ageGroup?.age}</div>
-                    <div>Size: {foundDog?.size?.size}</div>
-                    <div>Energy Level: {foundDog?.energyLevel?.energy}</div>
-                    <div>About Me: {foundDog?.aboutMe}</div>
-                </section>
-            </div>
-            
-            <div className="owners">
-                <div>{foundDog?.name}'s Human: {foundUser?.name}</div>
-                <div>About Me: {foundUser?.aboutMe}</div>
-                {
-                    foundUser?.pupSitting
-                    ? <div>* Interested in Pupsit Sharing</div>
-                    : ""
-                }
-            </div>
-        </article>
-        {
-            pupUserObject.id === foundDog?.userId
-            ? ""
-            : <button
-            onClick={
-                (evt) => {
-                    SchedulePupdateButton(evt)
-                }
-            }>Schedule Pupdate</button>
-        }
+        <section className="profile_page">
+            <div className="my_profile">{foundDog?.name}'s Profile</div>
+            <article className="dog_owner">
+                <div className="dog">
+                    <img className="profile_image" src={foundDog?.image} width="500px" alt=""></img>
+                    <section className="dog_stats">
+                        <div><b>Breed: </b>{foundDog?.breed}</div>
+                        <div><b>Age: </b>{foundDog?.ageGroup?.age}</div>
+                        <div><b>Size: </b>{foundDog?.size?.size}</div>
+                        <div><b>Energy Level: </b>{foundDog?.energyLevel?.energy}</div>
+                        <div className="profile_aboutMe"><b>About Me: </b>{foundDog?.aboutMe}</div>
+                    </section>
+                </div>
+                
+                <div className="owner">
+                    <div><b>{foundDog?.name}'s Human: </b>{foundUser?.name}</div>
+                    <div className="profile_aboutMe"><b>About Me: </b>{foundUser?.aboutMe}</div>
+                    {
+                        foundUser?.pupSitting
+                        ? <div className="interested_pupsit">🐾  Interested in Pupsit Sharing</div>
+                        : ""
+                    }
+                </div>
+            </article>
+            {
+                pupUserObject.id === foundDog?.userId
+                ? ""
+                : <article className="button_box">
+                    <button className="edit_button"
+                onClick={
+                    (evt) => {
+                        SchedulePupdateButton(evt)
+                    }
+                }>Schedule Pupdate</button>
+                </article>
+            }
+        </section>
     </>
     
 }

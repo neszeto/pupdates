@@ -1,5 +1,19 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    list-style: none;
+    background-color: #cc6600; 
+    padding: 20px;
     
+ }
+
+ .link {
+    color: white; 
+ }
+
+ .greeting {
+    color: white; 
+    font-family: Georgia, serif; 
+    font-size: 20px; 
+
  }
