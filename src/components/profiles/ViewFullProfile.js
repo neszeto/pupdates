@@ -78,7 +78,7 @@ export const ViewFullProfile = () => {
             <div className="my_profile">{foundDog?.name}'s Profile</div>
             <article className="dog_owner">
                 <div className="dog">
-                    <img className="profile_image" src={foundDog?.image} width="500px" alt=""></img>
+                    <img className="profile_image" src={foundDog?.image} height="500px"  alt=""></img>
                     <section className="dog_stats">
                         <div><b>Breed: </b>{foundDog?.breed}</div>
                         <div><b>Age: </b>{foundDog?.ageGroup?.age}</div>

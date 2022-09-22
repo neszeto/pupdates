@@ -72,7 +72,7 @@ export const Register = () => {
                             type="email" id="email" className="form-control"
                             placeholder="Email address" required />
                     </fieldset>
-                    <fieldset>
+                    <fieldset className="aboutMe_section">
                         <label htmlFor="email"> About Me</label>
                         <textarea onChange={updateUser}
                             type="email" id="aboutMe" className="form-aboutMe"

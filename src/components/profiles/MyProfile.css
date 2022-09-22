@@ -30,12 +30,16 @@
     margin-right: 200px; 
     box-sizing: content-box; 
     width: 200%; 
+    font-size: 25px;
 }
 
 .dog_owner {
     display: flex; 
     align-items: center;
     justify-content: center; 
+    
+    margin-left: 10%; 
+    margin-right: 10%; 
     
 }
 
@@ -48,6 +52,7 @@
 
 .profile_aboutMe {
     margin: 30px; 
+    font-size: 25px;
 }
 
 .interested_pupsit {

@@ -296,7 +296,7 @@ export const CreateProfile = () => {
                    }/>
                    </label>
                </fieldset>
-               <button
+               <button className="create_button"
                onClick={
                    (evt) => {
                        CreateProfileButton(evt)

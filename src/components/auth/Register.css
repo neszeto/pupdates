@@ -25,29 +25,29 @@
     background-color: rgba(255,255,255, .5);
     border: solid rgba(192, 162, 132, .5);
     text-align: center; 
-    width: 600px; 
-    margin: 150px; 
+    width: 40%; 
+    margin: 10%; 
     border-radius: 25px;
-    padding: 50px;
+    padding: 2%;
     box-shadow: rgb(93, 92, 92) 5px 5px 15px 5px;
     
 }
 
 .form-aboutMe {
-    width: 500px;
-    height: 100px; 
+    width: 60%;
+    height: 100px;
 }
 
 .form-control {
-    width: 200px;
-    height: 35px; 
+    width: 40%;
+    height: 35px;
 }
 
 .register_button {
     color: rgb(255, 255, 255); 
     font-size: 25px; 
     line-height: 29px; 
-    padding: 10px; 
+    padding: 7px; 
     border-radius: 26px; 
     font-weight: normal; 
     text-decoration: none; 
@@ -59,9 +59,18 @@
     border: 2px solid rgb(41, 60, 162); 
     display: inline-block;
     
+    
 }
 
     .register_button:hover {
     background: rgb(78, 104, 212); }
     .register_button:active {
     background: rgb(41, 60, 162); }
+
+
+
+.aboutMe_section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
