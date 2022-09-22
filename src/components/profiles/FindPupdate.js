@@ -58,6 +58,7 @@ export const FindPupdate = () => {
     return <article className="main_background">
         <h2 className="banner">Pup
             <font color="#ff8c1a"><i>dates</i></font>
+            <div className="tag_line"><i>"Find a playdate for your pup!"</i></div>
         </h2>
         <section className="sub_header">
             <h3>View All Profiles: </h3>

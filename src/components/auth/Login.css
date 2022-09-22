@@ -26,7 +26,7 @@ h1 {
 .form--login {
     background-color: rgba(255,255,255, .5); /*allows background to be opaque while text is not*/
     color: black; 
-    width: 40%;
+    width: 35%;
     height: 40%;
     text-align: center; 
     border: solid rgba(126, 151, 82, 0.5);
@@ -90,7 +90,7 @@ label {
     background-color: rgba(255,255,255, .5);
     color: black; 
     text-align: center; 
-    width: 40%; 
+    width: 35%; 
     height: 5%;
     border: solid rgba(126, 151, 82, 0.5);
     border-radius: 25px;

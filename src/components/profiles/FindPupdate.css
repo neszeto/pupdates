@@ -2,12 +2,13 @@
     background-image: url("../assets/pups_running.jpeg");
     background-repeat: no-repeat; 
     background-size: cover; 
-    padding: 140px;
+    box-shadow: 0 0 20px 20px white inset;
+    padding: 10%;
     background-position: center;
     color:#cc6600; 
     font-family: Tahoma, Geneva, sans-serif;
-    font-size: 75px;
-    margin: 0px; 
+    font-size: 90px;
+    margin: 0%; 
    
 }
 
@@ -113,7 +114,7 @@ h3 {
     margin-left: 15px; 
     margin-right: 15px; 
     border: solid thin #cc6600; 
-    border-radius: 5px; 
+    border-radius: 5px;
     padding: 5px; 
 
 }
@@ -126,4 +127,9 @@ h3 {
     margin-bottom: 10px; 
    
 
+}
+
+.tag_line {
+    font-size: 30px;
+    margin: 5px; 
 }

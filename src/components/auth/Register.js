@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import "./Register.css"
 
 
@@ -11,6 +11,18 @@ export const Register = () => {
         aboutMe: ""
         
     })
+
+    const [hover, setHover]= useState(false)
+
+    const onHover = () => {
+        setHover(true);
+    }
+
+    const onLeave = () => {
+        setHover(false);
+    }
+
+
     let navigate = useNavigate()
 
     const registerNewUser = () => {
@@ -88,6 +100,12 @@ export const Register = () => {
                             }
                         }
                         type="checkbox" id="pupSitting" />
+                        <div onMouseEnter={onHover} onMouseLeave={onLeave}>Whats this?</div>
+                        <div>
+                            {
+                                hover ? <div><i>'Pupsitting' participates are interested in swapping dog sitting responsibilies when needed. You can opt into or out of this feature at any time.</i></div> : ""
+                            }
+                        </div>
                     </fieldset>
                     <fieldset>
                         <button type="submit" className="register_button"> Register </button>
