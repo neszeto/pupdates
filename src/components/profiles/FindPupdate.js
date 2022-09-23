@@ -76,7 +76,7 @@ export const FindPupdate = () => {
                         () => {
                             setButton(true)
                         }
-                    }>Pupsit Sharing Only</button>
+                    }>Pupsitting Only</button>
                     <button className="all_button"
                     onClick={
                         () => {

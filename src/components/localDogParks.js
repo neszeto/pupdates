@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getAllParks } from "./ApiManager"
+import "./LocalDogParks.css"
 
 
 export const LocalDogParks = () => {
@@ -19,19 +20,22 @@ export const LocalDogParks = () => {
     
     
     return <section>
+        <div className="dogPark_header">Local Dog Parks in Nashville</div>
         {
             dogParks.map(
                 (park) => {
-                    return <section key={park.id}>
-                        <section>
-                            <div>{park.name}</div>
-                            <div>{park.hours}</div>
-                            <div>{park.location}</div>
+                    return <>
+                    <section key={park.id} className="info_image" >
+                        <section className="park_info">
+                            <div className="park_name">{park.name}</div>
+                            <div className="park_details"><b>Hours: </b>{park.hours}</div>
+                            <div className="park_details"><i>{park.location}</i></div>
                         </section>
-                        <section>
+                        <section className="park_image">
                             <img src={park.image} width="300px" alt=""></img>
                         </section>
                     </section>
+                    </>
             })
         }
     </section>

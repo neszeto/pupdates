@@ -309,14 +309,3 @@ export const CreateProfile = () => {
 }
 
 
-/**
- * <label htmlFor="upload">Upload Image: </label>
-                   <input required autoFocus type="file" accepts="image/*" multiple= "false" value={dog.image} 
-                   onChange={
-                       (evt) => {
-                           const copy = structuredClone(dog)
-                           copy.image = evt.target.value
-                           setDog(copy)
-                       }
-                   }/>
- */

@@ -40,6 +40,9 @@ export const NavBar = () => {
         <ul className="navbar">
             <div className="greeting">Hello, <i>{foundUser?.name}!</i></div>
             <li className="navbar_products">
+                <Link className="link" to="/localParks">Local Dog Parks</Link>
+            </li>
+            <li className="navbar_products">
                 <Link className="link" to="/pendingpupdate">Pending Pupdates</Link>
             </li> 
             <li className="navbar_products">
@@ -58,9 +61,6 @@ export const NavBar = () => {
                     </li>
                     </>
             }
-            <li className="navbar_products">
-                <Link className="link" to="/localParks">Local Dog Parks</Link>
-            </li>
             <li className="navbar_logout">   
                 <Link className="link" to="" 
                 onClick={

@@ -1,0 +1,37 @@
+
+
+.info_image {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 3%;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+.dogPark_header {
+    text-align: center; 
+    font-size: 35px; 
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+    margin: 5%; 
+    color: #cc6600; 
+}
+
+.park_name {
+    font-size: 30px;
+    margin: 2%;
+}
+
+.park_details {
+    font-size: 20px; 
+    margin: 2%;
+
+}
+
+.park_info {
+ 
+    width: 100%; 
+   
+}

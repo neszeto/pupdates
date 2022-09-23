@@ -1,0 +1,104 @@
+.my_profile {
+    font-size: 70px; 
+    font-family: Tahoma, Geneva, sans-serif;
+    text-align: center;
+    margin-bottom: 45px; 
+    color: #cc6600; 
+}
+
+.profile_page {
+    background-color:#fff2e6;
+    margin: 0px; 
+    padding-top: 50px; 
+    padding-bottom: 200px; 
+
+}
+
+.dog {
+    
+    text-align: center; 
+    padding: 40px; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px; 
+    min-width: 50%;
+    max-width: 50%; 
+
+    border: solid black; 
+    
+    
+}
+
+.owner {
+    
+    padding: 1%; 
+    margin-left: 5%; 
+    margin-right: 5%; 
+    box-sizing: content-box; 
+    width: 200%; 
+    font-size: 25px;
+    
+    box-shadow: rgb(169, 167, 167) 5px 5px 15px 5px;
+    background-color: white; 
+
+    border: solid black; 
+  
+    
+}
+
+.dog_owner {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    margin-left: 5%; 
+    margin-right: 5%; 
+    background-image: url("../assets/paper.jpeg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    box-shadow: 0 0 20px 20px #fff2e6 inset;
+
+    
+}
+
+.profile_image {
+   
+   border-radius: 10px;
+   margin-bottom: 15px; 
+   
+   
+}
+
+.profile_aboutMe {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 25px;
+    background-color: white; 
+    border-radius: 5px;
+    padding: 2px; 
+    
+}
+
+.interested_pupsit {
+    font-size: 25px;
+    font-family: cursive; 
+    color: rgb(253, 140, 47); 
+}
+
+.edit_button {
+   padding: 15px; 
+   font-size: 20px;
+   border-radius: 15px; 
+   background-color: #cc6600; 
+   color: white; 
+   box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
+
+}
+
+.button_box {
+    text-align: right; 
+    margin-right: 150px; 
+}
+
+.dog_stats {
+    font-size: 22px; 
+}

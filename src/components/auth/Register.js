@@ -103,7 +103,7 @@ export const Register = () => {
                         <div onMouseEnter={onHover} onMouseLeave={onLeave}>Whats this?</div>
                         <div>
                             {
-                                hover ? <div><i>'Pupsitting' participates are interested in swapping dog sitting responsibilies when needed. You can opt into or out of this feature at any time.</i></div> : ""
+                                hover ? <div><i>'Pupsitting' participants are interested in swapping dog sitting responsibilities with other participants. You can opt into or out of this feature at any time.</i></div> : ""
                             }
                         </div>
                     </fieldset>

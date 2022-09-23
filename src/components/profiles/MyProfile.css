@@ -1,4 +1,66 @@
+.dog_owner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 1fr;
+    text-align: center; 
+    
+}
+
+.dog_image {
+    margin-left: 20%;
+    margin-right: 0.1%;
+    padding: 5%; 
+    background-color:#fff2e6;
+    box-shadow: 0 0 5px 5px white inset;
+    
+    
+}
+
+
+.all_info {
+    margin-right: 20%; 
+    margin-left: 0.1%;
+    padding: 5%; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around; 
+    background-color:#fff2e6;
+    box-shadow: 0 0 5px 5px white inset;
+    color: rgb(128, 128, 128);
+    font-family: 'Muli', 'Helvetica', sans-serif, system-ui;
+    font-size: 25px; 
+
+}
+
+.dog_stats {
+    border-bottom: solid thin grey; 
+    padding-bottom: 10%; 
+
+}
+
+.profile_image {
+    border-radius: 90px; 
+}
+
 .my_profile {
+    text-align: center; 
+}
+
+.button_box {
+    text-align: right;
+    margin-right: 10%;
+}
+.edit_button {
+    padding: 15px; 
+    font-size: 20px;
+    border-radius: 15px; 
+    background-color: #cc6600; 
+    color: white; 
+    box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
+ 
+ }
+ 
+ .my_profile {
     font-size: 70px; 
     font-family: Tahoma, Geneva, sans-serif;
     text-align: center;
@@ -6,75 +68,7 @@
     color: #cc6600; 
 }
 
-.profile_page {
-    background-color:#fff2e6;
-    margin: 0px; 
-    padding-top: 50px; 
-    padding-bottom: 200px; 
-
-}
-
-.dog {
-    
-    text-align: left; 
-    padding: 40px; 
-    justify-content: center; 
-    align-items: center; 
-    margin: 20px; 
-    min-width: 50%;
-    max-width: 50%; 
-    
-}
-
-.owner {
-    
-    padding: 1%; 
-    margin-left: 5%; 
-    margin-right: 5%; 
-    box-sizing: content-box; 
-    width: 200%; 
-    font-size: 25px;
-}
-
-.dog_owner {
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-    margin-left: 10%; 
-    margin-right: 10%; 
-
-    
-}
-
-.profile_image {
-   
-   border-radius: 15px;
-   margin-bottom: 15px; 
-   box-shadow: rgb(114, 112, 112) 5px 5px 15px 5px;
-}
 
 .profile_aboutMe {
-    margin: 30px; 
-    font-size: 25px;
-}
-
-.interested_pupsit {
-    font-size: 25px;
-    font-family: cursive; 
-    color: rgb(253, 140, 47); 
-}
-
-.edit_button {
-   padding: 15px; 
-   font-size: 20px;
-   border-radius: 15px; 
-   background-color: #cc6600; 
-   color: white; 
-   box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
-
-}
-
-.button_box {
-    text-align: right; 
-    margin-right: 150px; 
+    margin-top: 5%;
 }

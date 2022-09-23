@@ -56,11 +56,15 @@ export const MyProfile = () => {
     
     
     if (pupUserObject && foundDog) { 
-        return <section className="profile_page">
+        return  <section className="profile_page">
+            <div class="container">
+            </div>
             <div className="my_profile">My Profile</div>
             <article className="dog_owner">
-                <div className="dog">
-                    <img className="profile_image" src={foundDog?.image} height="500px" alt=""></img>
+                <div className="dog_image">
+                    <img className="profile_image" src={foundDog?.image} height="500" alt=""></img>
+                </div>
+                <div className="all_info">
                     <section className="dog_stats">
                         <div><b>Name: </b>{foundDog?.name}</div>
                         <div><b>Breed: </b>{foundDog?.breed}</div>
@@ -69,16 +73,16 @@ export const MyProfile = () => {
                         <div><b>Energy Level: </b>{foundDog?.energyLevel?.energy}</div>
                         <div className="profile_aboutMe"><b>About Me: </b>{foundDog?.aboutMe}</div>
                     </section>
-                </div>
-                
-                <div className="owner">
-                    <div><b>{foundDog?.name}'s Human: </b>{foundUser?.name}</div>
-                    <div className="profile_aboutMe"><b>About Me: </b>{foundUser?.aboutMe}</div>
-                    {
-                        foundUser?.pupSitting
-                        ? <div className="interested_pupsit"><b>🐾 Interested in Pupsit Sharing</b></div>
-                        : ""
-                    }
+                  
+                    <div className="owner">
+                        <div><b>{foundDog?.name}'s Human: </b>{foundUser?.name}</div>
+                        <div className="profile_aboutMe"><b>About Me: </b>{foundUser?.aboutMe}</div>
+                        {
+                            foundUser?.pupSitting
+                            ? <div className="interested_pupsit"><b>🐾 Interested in Pupsitting</b></div>
+                            : ""
+                        }
+                    </div>
                 </div>
             </article>
             <article className="button_box">
@@ -96,8 +100,5 @@ export const MyProfile = () => {
     else {
         return <div>No Profile Found</div>
     }
-    
-  
-
 
 }

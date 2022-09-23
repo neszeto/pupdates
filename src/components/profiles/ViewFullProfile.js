@@ -77,8 +77,10 @@ export const ViewFullProfile = () => {
         <section className="profile_page">
             <div className="my_profile">{foundDog?.name}'s Profile</div>
             <article className="dog_owner">
-                <div className="dog">
+                <div className="dog_image">
                     <img className="profile_image" src={foundDog?.image} height="500px" alt=""></img>
+                </div>
+                <div className="all_info">
                     <section className="dog_stats">
                         <div><b>Breed: </b>{foundDog?.breed}</div>
                         <div><b>Age: </b>{foundDog?.ageGroup?.age}</div>
@@ -86,16 +88,17 @@ export const ViewFullProfile = () => {
                         <div><b>Energy Level: </b>{foundDog?.energyLevel?.energy}</div>
                         <div className="profile_aboutMe"><b>About Me: </b>{foundDog?.aboutMe}</div>
                     </section>
-                </div>
+                
                 
                 <div className="owner">
                     <div><b>{foundDog?.name}'s Human: </b>{foundUser?.name}</div>
                     <div className="profile_aboutMe"><b>About Me: </b>{foundUser?.aboutMe}</div>
                     {
                         foundUser?.pupSitting
-                        ? <div className="interested_pupsit">🐾  Interested in Pupsit Sharing</div>
+                        ? <div className="interested_pupsit">🐾  Interested in Pupsitting</div>
                         : ""
                     }
+                </div>
                 </div>
             </article>
             {
