@@ -32,18 +32,25 @@
 
 }
 
+
+
 .dog_stats {
     border-bottom: solid thin grey; 
-    padding-bottom: 10%; 
+    padding-bottom: 5%; 
 
+}
+.owner {
+    padding-top: 5%; 
 }
 
 .profile_image {
     border-radius: 90px; 
+    box-shadow: rgb(157, 157, 157) 2px 2px 15px 0px;
 }
 
 .my_profile {
     text-align: center; 
+    padding-top: 5%; 
 }
 
 .button_box {
@@ -56,7 +63,7 @@
     border-radius: 15px; 
     background-color: #cc6600; 
     color: white; 
-    box-shadow: rgb(157, 157, 157) 5px 5px 15px 5px;
+    box-shadow: rgb(157, 157, 157) 2px 2px 15px 0px;
  
  }
  
@@ -71,4 +78,9 @@
 
 .profile_aboutMe {
     margin-top: 5%;
+}
+
+.interested_pupsit {
+    color: #cc6600; 
+    margin-top: 3%;
 }

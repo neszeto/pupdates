@@ -7,6 +7,7 @@
     margin-top: 5%;
     margin-left: 25%;
     margin-right: 25%;
+    
 
 }
 
@@ -22,11 +23,15 @@
 .park_name {
     font-size: 30px;
     margin: 2%;
+    color: rgb(128, 128, 128);
+    font-family: 'Muli', 'Helvetica', sans-serif, system-ui;
 }
 
 .park_details {
     font-size: 20px; 
     margin: 2%;
+    color: rgb(128, 128, 128);
+    font-family: 'Muli', 'Helvetica', sans-serif, system-ui;
 
 }
 
@@ -34,4 +39,8 @@
  
     width: 100%; 
    
+}
+
+.image_of_park {
+    border-radius: 15px; 
 }

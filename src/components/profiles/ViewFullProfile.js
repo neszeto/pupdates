@@ -95,7 +95,7 @@ export const ViewFullProfile = () => {
                     <div className="profile_aboutMe"><b>About Me: </b>{foundUser?.aboutMe}</div>
                     {
                         foundUser?.pupSitting
-                        ? <div className="interested_pupsit">🐾  Interested in Pupsitting</div>
+                        ? <div className="interested_pupsit">🐾  <b>Interested in Pupsitting</b></div>
                         : ""
                     }
                 </div>

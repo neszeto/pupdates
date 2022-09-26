@@ -23,13 +23,13 @@
 
 .register {
     background-color: rgba(255,255,255, .5);
-    border: solid rgba(192, 162, 132, .5);
+    
     text-align: center; 
     width: 40%; 
     margin: 10%; 
     border-radius: 25px;
     padding: 2%;
-    box-shadow: rgb(93, 92, 92) 5px 5px 15px 5px;
+    box-shadow: rgb(119, 118, 118) 5px 5px 15px 5px;
     
 }
 

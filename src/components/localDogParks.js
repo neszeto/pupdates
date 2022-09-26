@@ -32,7 +32,7 @@ export const LocalDogParks = () => {
                             <div className="park_details"><i>{park.location}</i></div>
                         </section>
                         <section className="park_image">
-                            <img src={park.image} width="300px" alt=""></img>
+                            <img className="image_of_park" src={park.image} width="300px" alt=""></img>
                         </section>
                     </section>
                     </>

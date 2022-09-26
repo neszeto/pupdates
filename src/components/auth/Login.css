@@ -6,6 +6,7 @@ h1 {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 100px;
     margin-left: 175px;
+    
 }
 
 /*background -------------------------*/
@@ -19,6 +20,8 @@ h1 {
     background-position: right;
     
     
+    
+    
 }
 
 /*login box--------------------------*/
@@ -29,11 +32,11 @@ h1 {
     width: 35%;
     height: 40%;
     text-align: center; 
-    border: solid rgba(126, 151, 82, 0.5);
+    padding-top: 2%; 
     border-radius: 25px; 
     margin-left: 10%;
     padding-bottom: 2%;
-    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    box-shadow: rgb(85, 84, 84) 5px 5px 15px 5px;
     
 }
 
@@ -92,12 +95,12 @@ label {
     text-align: center; 
     width: 35%; 
     height: 5%;
-    border: solid rgba(126, 151, 82, 0.5);
+   
     border-radius: 25px;
     margin-left: 10%; 
-    margin-top: 0.5%;
+    margin-top: 0.1%;
     padding-top: 1%;
-    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    box-shadow: rgb(85, 84, 84) 5px 5px 15px 5px;
     
     
 }
