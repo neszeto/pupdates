@@ -66,7 +66,7 @@ export const ViewFullProfile = () => {
         .then(response=>response.json())
         .then(
             () => {
-                setFeedback("Your Pupdate request has been successfully sent")
+                setFeedback("Your Pupdate request has been successfully sent!")
             }
         )
 

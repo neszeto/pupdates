@@ -62,7 +62,7 @@ export const MyProfile = () => {
             <div className="my_profile">My Profile</div>
             <article className="dog_owner">
                 <div className="dog_image">
-                    <img className="profile_image" src={foundDog?.image} height="500" alt=""></img>
+                    <img className="profile_image" src={foundDog?.image} height="500px" alt=""></img>
                 </div>
                 <div className="all_info">
                     <section className="dog_stats">

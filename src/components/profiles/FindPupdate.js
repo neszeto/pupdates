@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllDogsAndTheirUsers } from "../ApiManager"
 import "./FindPupdate.css"
+import Create from "../assets/createPF.jpeg"
+import Match from "../assets/match.jpeg"
+import Request from "../assets/email.jpeg"
 
 
 
@@ -60,6 +63,32 @@ export const FindPupdate = () => {
             <font color="#ff8c1a"><i>dates</i></font>
             <div className="tag_line"><i>"Find a playdate for your pup!"</i></div>
         </h2>
+        <div className="divider-container">
+   
+                <div className="Instruction_box">
+                    <div className="how_to_header"><b>How to find a match with Pupdates!</b></div>
+                </div>
+                <div className="illustrations">
+                    <div className="single_illustration">
+                        <img className="icon_create" src={Create} alt="" width="35%%" height="50%"></img>
+                        <div className="illustration_header">Create a Profile</div>
+                        <div className="instructions">Create a personalized profile to let other users know a little about your pup and what you're looking for in a match. </div>
+                    </div>
+                    <div className="single_illustration">
+                        <img className="icon_match" src={Match} alt="" width="35%" height="50%"></img>
+                        <div className="illustration_header">Find a Match</div>
+                        <div className="instructions">Browse all listed active profiles below. Useful information like energy level and age group are listed to help find your pup's perfect match. </div>
+                    </div>
+                    <div className="single_illustration">
+                        <img className="icon_request" src={Request} alt="" width="35%" height="50%"></img>
+                        <div className="illustration_header">Send a Pupdate Request</div>
+                        <div className="instructions">When you have found a perfect match, send that user a Pupdate request. Your match will reach out to you through the email address provided at registration.</div>
+                    </div>
+                </div>
+        </div>
+        <div className="line_container">
+            <div className="line_divider"></div>
+        </div>
         <section className="sub_header">
             <h3>View All Profiles: </h3>
             <section className="search_filter">

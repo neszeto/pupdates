@@ -4,8 +4,10 @@ import { CreateProfile } from "../profiles/CreateProfile"
 import { EditProfile } from "../profiles/EditProfile"
 import { FindPupdate } from "../profiles/FindPupdate"
 import { MyProfile } from "../profiles/MyProfile"
-import { PendingPupdate } from "../profiles/PendingPupdates"
+
 import { ViewFullProfile } from "../profiles/ViewFullProfile"
+
+import { PendingPupdate } from "../profiles/PendingPupdate"
 
 
 
@@ -18,7 +20,7 @@ export const ApplicationViews = () => {
                 <>
                     
                     <FindPupdate />
-                    
+                  
 
                     <Outlet />
                 </>

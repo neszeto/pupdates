@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate} from "react-router-dom"
-import { getAllDogs, getAllUsers } from "../ApiManager"
+import { getAllDogs, getAllRequests, getAllUsers } from "../ApiManager"
 import "./NavBar.css"
 
 
@@ -14,6 +14,8 @@ export const NavBar = () => {
 
     const [dogs, setDogs] = useState([])
     const [users, setUsers]= useState([])
+    const [requests, setRequests] = useState([])
+    
   
     useEffect(
         () => {
@@ -29,12 +31,22 @@ export const NavBar = () => {
                     setUsers(userArray)
                 }
             )
+            getAllRequests()
+            .then( 
+                (requestArray) => {
+                    setRequests(requestArray)
+                }
+            )
         }, 
         []
     )
 
+  
+
     let foundUser = users.find(user => user.id === pupUserObject.id)
     let foundDog = dogs.find(dog => dog.userId === pupUserObject.id)
+
+    let userRequests = requests.filter(request=> request.recievingDogId === foundDog?.id)
 
     return (<>
         <ul className="navbar">
@@ -43,7 +55,10 @@ export const NavBar = () => {
                 <Link className="link" to="/localParks">Local Dog Parks</Link>
             </li>
             <li className="navbar_products">
+                <div className="notify-container">
+                <span className="notify-bubble">{userRequests.length}</span>
                 <Link className="link" to="/pendingpupdate">Pending Pupdates</Link>
+                </div>
             </li> 
             <li className="navbar_products">
                 <Link className="link" to="/">Find a Pupdate</Link>
@@ -58,6 +73,10 @@ export const NavBar = () => {
                     </li> 
                     <li className="navbar_products">
                         <Link className="link" to="/myprofile">My Profile</Link>
+                        <div className="avatar">
+                            <img src={foundDog?.image}></img>
+                        </div>
+                      
                     </li>
                     </>
             }

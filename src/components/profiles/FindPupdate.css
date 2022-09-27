@@ -50,9 +50,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     font-family: 'Muli', 'Helvetica', sans-serif, system-ui;
-  
-
+   
+    
 }
+
 
 .search {
     font-size: 20px;
@@ -143,4 +144,82 @@ h3 {
 .tag_line {
     font-size: 30px;
     margin: 5px; 
+}
+
+.illustrations {
+    display: flex;
+    flex-direction: row; 
+    
+}
+
+.icon_create {
+    border-radius: 50%;
+    box-shadow: rgb(184, 182, 182) 2px 2px 15px 0px;
+    padding: 0% 3%;
+    
+
+}
+
+.icon_match {
+    border-radius: 50%;
+    box-shadow: rgb(184, 182, 182) 2px 2px 15px 0px;
+    padding: 0% 3%;
+    
+
+}
+
+.icon_request {
+    border-radius: 50%;
+    box-shadow: rgb(184, 182, 182) 2px 2px 15px 0px;
+
+}
+
+.how_to_header {
+    font-size: 40px; 
+    padding: 5%;
+}
+
+.illustration_header {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.instructions {
+    padding: 4%;
+}
+
+.divider-container {
+    
+    color: rgb(128, 128, 128);
+    text-align: center; 
+    justify-content: center; 
+    padding-bottom: 5%; 
+    width: fit-content; 
+    
+}
+
+.single_illustration {
+   
+    width: 20%;
+    
+    
+}
+
+.illustrations {
+    justify-content: center; 
+    padding-bottom: 2%;
+}
+
+.line_divider {
+    border-bottom: solid thin rgb(128, 128, 128);
+    width: 50%;
+    text-align: center; 
+}
+
+.line_container {
+    display: flex; 
+    justify-content: center; 
+    padding-bottom: 5%;
+   
 }
