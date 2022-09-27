@@ -85,47 +85,49 @@ export const PendingPupdate = () => {
                     const foundInitiatingUser = users.find(user => user?.id === foundInitiatingDog?.userId)
                     const foundRecievingDog = dogs.find(dog=> dog.id === request.recievingDogId)
 
-                        return <section className="pupdate_request" key={request.id}>
-                        <div className="text">"{foundInitiatingDog?.name}" would like a playdate with "{foundRecievingDog?.name}"
-                        <button id={foundInitiatingDog?.id} className="contact_button"
-                        onClick={
-                            (evt) => {
-                                const copy = structuredClone(accept)
-                                copy.click = true
-                                copy.acceptButtonId = parseInt(evt.target.id)
-                                setAccept(copy)
+                        return <>
+                        <section className="pupdate_request" key={request.id}>
+                            <div className="text">"{foundInitiatingDog?.name}" would like a playdate with "{foundRecievingDog?.name}"
+                            <button id={foundInitiatingDog?.id} className="contact_button"
+                            onClick={
+                                (evt) => {
+                                    const copy = structuredClone(accept)
+                                    copy.click = true
+                                    copy.acceptButtonId = parseInt(evt.target.id)
+                                    setAccept(copy)
+                                }
+                            }>Show Contact</button>
+                            <button id={request.id} className="decline_button"
+                            onClick={
+                                () => {
+                                    fetch(`http://localhost:8088/requests/${request.id}`, {
+                                        method: "DELETE"
+                                    })
+                                    .then(
+                                        () => getAllRequests()
+                                    )
+                                    .then(
+                                        (requestsArray) => setRequests(requestsArray)
+                                    )
+                                    .then(
+                                        () => {
+                                            window.location.reload(false)
+                                        }
+                                    )
+                                
+                                }
+                            }>Remove</button>
+                            {
+                                accept.click && accept.acceptButtonId === foundInitiatingDog.id
+                                ? <section className="contact_info">
+                                <div>Contact {foundInitiatingDog.name}'s owner <b>{foundInitiatingUser.name}</b>, to set up a playdate!</div> 
+                                <div><b>Email: </b>{foundInitiatingUser.email}</div>
+                                </section>
+                                : ""
                             }
-                        }>Show Contact</button>
-                        <button id={request.id} className="decline_button"
-                        onClick={
-                            () => {
-                                fetch(`http://localhost:8088/requests/${request.id}`, {
-                                    method: "DELETE"
-                                })
-                                .then(
-                                    () => getAllRequests()
-                                )
-                                .then(
-                                    (requestsArray) => setRequests(requestsArray)
-                                )
-                                .then(
-                                    () => {
-                                        window.location.reload(false)
-                                    }
-                                )
-                              
-                            }
-                        }>Remove</button>
-                        {
-                            accept.click && accept.acceptButtonId === foundInitiatingDog.id
-                            ? <section className="contact_info">
-                            <div>Contact {foundInitiatingDog.name}'s owner <b>{foundInitiatingUser.name}</b>, to set up a playdate!</div> 
-                            <div><b>Email: </b>{foundInitiatingUser.email}</div>
-                            </section>
-                            : ""
-                        }
-                        </div>
+                            </div>
                         </section>
+                        </>
                 })
         }
         </>      

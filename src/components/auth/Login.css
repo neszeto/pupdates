@@ -28,7 +28,6 @@ h1 {
 
 .form--login {
     background-color: rgba(255,255,255, .5); /*allows background to be opaque while text is not*/
-    color: black; 
     width: 35%;
     height: 40%;
     text-align: center; 
@@ -53,12 +52,12 @@ a:link {
 
 h2 {
     font-size: 35px; 
-    color: #331a00; 
+    color: rgb(94, 93, 93);
 }
 
 .email {
     font-size: 25px; 
-    color: #331a00;
+    color:rgb(94, 93, 93);
 }
 
 label {
@@ -104,3 +103,4 @@ label {
     
     
 }
+

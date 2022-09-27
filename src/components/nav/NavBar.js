@@ -50,44 +50,48 @@ export const NavBar = () => {
 
     return (<>
         <ul className="navbar">
-            <div className="greeting">Hello, <i>{foundUser?.name}!</i></div>
-            <li className="navbar_products">
-                <Link className="link" to="/localParks">Local Dog Parks</Link>
-            </li>
-            <li className="navbar_products">
-                <div className="notify-container">
-                <span className="notify-bubble">{userRequests.length}</span>
-                <Link className="link" to="/pendingpupdate">Pending Pupdates</Link>
-                </div>
-            </li> 
-            <li className="navbar_products">
-                <Link className="link" to="/">Find a Pupdate</Link>
-            </li> 
-            {
-                foundDog
-                ?   <li className="navbar_products">
-                        <Link className="link" to="/myprofile">My Profile</Link>
-                    </li>
-                :   <><li className="navbar_products">
-                        <Link className="link" to="/createprofile">Create Profile</Link>
-                    </li> 
-                    <li className="navbar_products">
-                        <Link className="link" to="/myprofile">My Profile</Link>
-                        <div className="avatar">
-                            <img src={foundDog?.image}></img>
-                        </div>
-                      
-                    </li>
-                    </>
-            }
-            <li className="navbar_logout">   
-                <Link className="link" to="" 
-                onClick={
-                    () => {
-                        localStorage.removeItem("pup_user")
-                    navigate("/", {replace: true})
-                    }}>Logout</Link>
-            </li>
+            <div className="left_side_links">
+                <div className="greeting"><b>Hello, </b><i>{foundUser?.name}!</i></div>
+            </div>
+            <div className="right_side_links">
+                <li className="navbar_products">
+                    <Link className="link" to="/localParks">Local Dog Parks</Link>
+                </li>
+                <li className="navbar_products">
+                    <div className="notify-container">
+                    <span className="notify-bubble">{userRequests.length}</span>
+                    <Link className="link" to="/pendingpupdate">Pending Pupdates</Link>
+                    </div>
+                </li> 
+                <li className="navbar_products">
+                    <Link className="link" to="/">Find a Pupdate</Link>
+                </li> 
+                {
+                    foundDog
+                    ?   <li className="navbar_products">
+                            <Link className="link" to="/myprofile">My Profile</Link>
+                        </li>
+                    :   <><li className="navbar_products">
+                            <Link className="link" to="/createprofile">Create Profile</Link>
+                        </li> 
+                        <li className="navbar_products">
+                            <Link className="link" to="/myprofile">My Profile</Link>
+                            <div className="avatar">
+                                <img src={foundDog?.image}></img>
+                            </div>
+                        
+                        </li>
+                        </>
+                }
+                <li className="navbar_logout">   
+                    <Link className="link" to="" 
+                    onClick={
+                        () => {
+                            localStorage.removeItem("pup_user")
+                        navigate("/", {replace: true})
+                        }}><b>Logout</b></Link>
+                </li>
+            </div>
         </ul>
         </>
     )

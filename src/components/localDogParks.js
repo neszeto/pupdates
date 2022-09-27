@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllParks } from "./ApiManager"
 import "./LocalDogParks.css"
+//import Video from "./assets/dog_running.mp4"
 
 
 export const LocalDogParks = () => {
@@ -20,7 +21,15 @@ export const LocalDogParks = () => {
     
     
     return <section>
-        <div className="dogPark_header">Local Dog Parks in Nashville</div>
+        <div>
+            
+            
+            <div className="header_subheader">
+                <div className="dogPark_header"><b>Find the perfect spot for your pupdate!</b></div>
+                <div className="dogPark_subHeader">Browse a list of Nashville's local dog parks below, including location and hours of operation. </div>
+            </div>
+        </div>
+        <div className="information_section">
         {
             dogParks.map(
                 (park) => {
@@ -38,5 +47,10 @@ export const LocalDogParks = () => {
                     </>
             })
         }
+        </div>
     </section>
 }
+
+/**<video loop autoPlay muted id="video">
+                <source src={Video} type="video/mp4"/>
+            </video> */

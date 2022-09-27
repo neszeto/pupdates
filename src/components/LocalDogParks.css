@@ -11,14 +11,7 @@
 
 }
 
-.dogPark_header {
-    text-align: center; 
-    font-size: 35px; 
-    font-family: Tahoma, Geneva, sans-serif;
-    text-align: center;
-    margin: 5%; 
-    color: #cc6600; 
-}
+
 
 .park_name {
     font-size: 30px;
@@ -43,4 +36,49 @@
 
 .image_of_park {
     border-radius: 15px; 
+}
+
+#video {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: -1; 
+    overflow: hidden; 
+    height: 100%;
+    max-height: 56.3vw; 
+    width: 100%; 
+    opacity: 0.7; 
+
+}
+
+
+.information_section {
+    padding-top: 25%; 
+}
+
+
+
+.dogPark_header {
+    font-size: 50px; 
+    color: rgb(49, 48, 48); 
+}
+
+
+.header_subheader {
+    display: flex; 
+    flex-direction: column;
+    text-align: center; 
+    font-family: Tahoma, Geneva, sans-serif;
+    
+   
+    margin-top: 20%;
+
+}
+
+.dogPark_subHeader {
+    font-size: 25px; 
+    padding: 1%;
+    color: rgb(49, 48, 48); 
 }

@@ -2,28 +2,39 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    background-color: #cc6600; 
+    background-color: white; 
     padding: 20px;
     font-family: 'Muli', 'Helvetica', sans-serif, system-ui;
+    background-color: rgba(255,255,255, .5); 
+    
     
  }
 
  .link {
-    color: white; 
+    color: rgb(128, 128, 128);
+ }
+ .link:hover {
+    text-decoration: underline; 
+    text-underline-offset: 0.4rem; 
+    text-decoration-thickness: 1px; 
+    color: #cc6600; 
+     
+    
  }
 
  .greeting {
-    color: white; 
+    color:  #cc6600; 
     font-family: Georgia, serif; 
-    font-size: 20px; 
+    font-size: 22px; 
 
  }
 
  .notify-bubble {
     position: absolute;
-    left: -20px;
+    right: -15px;
+    top: -7px;
     padding: 2px 5px 2px 6px;
-    background-color: #fff2e6;
+    background-color:#cc6600; 
     color: black;
     font-size: 0.65em;
     border-radius: 50%;
@@ -34,11 +45,24 @@
 
 .notify-container {
     position: relative;
-      display: inline-block;
+    display: inline-block;
     
   }
 
 
 .avatar {
     position: absolute;
+}
+
+.left_side_links {
+
+}
+
+.right_side_links {
+    display: flex; 
+    justify-content: space-between; 
+    width: 50%; 
+    
+    
+
 }

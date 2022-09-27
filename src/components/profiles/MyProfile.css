@@ -10,7 +10,6 @@
     margin-left: 20%;
     margin-right: 0.1%;
     padding: 5%; 
-
     box-shadow: 0 0 5px 5px white inset;
     
     
@@ -44,13 +43,14 @@
 }
 
 .profile_image {
-    border-radius: 90px; 
+    border-radius: 25%; 
     box-shadow: rgb(157, 157, 157) 2px 2px 15px 0px;
 }
 
 .my_profile {
     text-align: center; 
     padding-top: 5%; 
+    
 }
 
 .button_box {
@@ -68,7 +68,7 @@
  }
  
  .my_profile {
-    font-size: 70px; 
+    font-size: 50px; 
     font-family: Tahoma, Geneva, sans-serif;
     text-align: center;
     margin-bottom: 45px; 

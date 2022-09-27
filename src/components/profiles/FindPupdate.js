@@ -5,7 +5,7 @@ import "./FindPupdate.css"
 import Create from "../assets/createPF.jpeg"
 import Match from "../assets/match.jpeg"
 import Request from "../assets/email.jpeg"
-
+import Video_main from "../assets/dogs_playing.mp4"
 
 
 
@@ -58,11 +58,21 @@ export const FindPupdate = () => {
         [pupsitButton]
     )
     
-    return <article className="main_background">
-        <h2 className="banner">Pup
-            <font color="#ff8c1a"><i>dates</i></font>
-            <div className="tag_line"><i>"Find a playdate for your pup!"</i></div>
-        </h2>
+    return <article className="main_background"> 
+        <video loop autoPlay muted id="video_banner">
+            <source src={Video_main} type="video/mp4"/>
+        </video>
+        <div className="welcome">
+            <div className="tag_line">Welcome To</div>
+            <h2 className="banner_words">Pup
+                <font color="#ff8c1a"><i>dates</i></font>
+            </h2>
+            <div className="line_container_welcome">
+                <div className="line_divider_welcome"></div>
+            </div>
+            <div className="tag_line_welcome">Find a playdate for your pup!</div>
+        </div>
+        
         <div className="divider-container">
    
                 <div className="Instruction_box">
@@ -90,7 +100,7 @@ export const FindPupdate = () => {
             <div className="line_divider"></div>
         </div>
         <section className="sub_header">
-            <h3>View All Profiles: </h3>
+            <h3>Browse All Profiles : </h3>
             <section className="search_filter">
                 <div className="search_input">
                     <label className="search" htmlFor="search_profile">Search Profiles </label>
