@@ -4,11 +4,18 @@
     display: flex;
     justify-content: space-between; 
     margin-bottom: 3%;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 25%;
     margin-right: 25%;
     
+    border-radius: 25px; 
+    padding: 2%;
+    transition-duration: 0.5s; 
 
+}
+
+.info_image:hover {
+    box-shadow: rgb(194, 191, 191) 0px 0px 25px 10px;
 }
 
 
@@ -29,7 +36,11 @@
 }
 
 .park_info {
- 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center; 
     width: 100%; 
    
 }
@@ -56,6 +67,7 @@
 
 .information_section {
     padding-top: 25%; 
+    
 }
 
 

@@ -2,11 +2,17 @@
 
 .pupdate_request {
     
-    margin: 100px; 
-    
-    
-    
-    
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    padding: 1.5%;
+    text-align: center;
+    border-radius: 25px; 
+    transition-duration: 0.5s;
+}
+
+.pupdate_request:hover {
+    box-shadow: rgb(194, 191, 191) 0px 0px 25px 10px;
 }
 
 .contact_button {
@@ -44,7 +50,23 @@
     border-radius: 25px; 
     background-color:#fff2e6;
     
+    margin-left: 15%;
     
+    
+}
+
+.line_container_pupdates {
+    display: flex; 
+    justify-content: center; 
+    padding: 5%;
+
+   
+}
+
+.line_divider_pupdates {
+    border-bottom: solid thin #cc6600; 
+    width: 40%;
+    text-align: center; 
 }
 
 

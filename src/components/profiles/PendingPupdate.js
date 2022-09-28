@@ -78,6 +78,9 @@ export const PendingPupdate = () => {
 
     if (requestsArray.length > 0) {
         return <>
+        <div className="line_container_pupdates">
+            <div className="line_divider_pupdates"></div>
+        </div>
         {
             requestsArray.map(
                 (request) => {
@@ -130,6 +133,9 @@ export const PendingPupdate = () => {
                         </>
                 })
         }
+        <div className="line_container_pupdates">
+            <div className="line_divider_pupdates"></div>
+        </div>
         </>      
     }
     else {
