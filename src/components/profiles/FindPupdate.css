@@ -78,7 +78,7 @@
 
 
 h3 {
-   color: #cc6600;
+   color: rgb(128, 128, 128);
    font-size: 25px;
    margin-left: 40px; 
 }
@@ -95,6 +95,7 @@ h3 {
 .search {
     font-size: 20px;
     color: rgb(128, 128, 128);
+    
     
 }
 
@@ -119,6 +120,7 @@ h3 {
     color: white;
     background-color:#cc6600; 
     box-shadow: rgb(191, 186, 186) 1px 1px 10px 1px;
+    border-radius: 5px; 
 }
 
 .all_button {
@@ -127,11 +129,17 @@ h3 {
     margin-right: 40px;
     color: #cc6600;
     box-shadow: rgb(191, 186, 186) 1px 1px 10px 1px;
+    border-radius: 5px; 
 
 }
 
 .input_field {
-    padding: 5px; 
+    padding: 7px; 
+    border-radius: 25px; 
+    border-color: rgb(128, 128, 128);
+    
+   
+
 }
 
 .dog_name {

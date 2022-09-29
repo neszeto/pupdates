@@ -59,7 +59,7 @@ export const MyProfile = () => {
         return  <section className="profile_page">
             <div class="container">
             </div>
-            <div className="my_profile">My Profile</div>
+            <div className="my_profile"><b>My Profile</b></div>
             <article className="dog_owner">
                 <div className="dog_image">
                     <img className="profile_image" src={foundDog?.image} height="500px" alt=""></img>

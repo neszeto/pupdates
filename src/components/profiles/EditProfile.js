@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { getAllAgeGroups, getAllEnergyLevels, getAllSizes } from "../ApiManager"
 import "./EditProfile.css"
 
+let API = "https://dolphin-app-eblpn.ondigitalocean.app"
 
 export const EditProfile = () => {
     let {foundDogId} = useParams()
@@ -21,7 +22,7 @@ export const EditProfile = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel&id=${foundDogId}`)
+            fetch(`${API}/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel&id=${foundDogId}`)
             .then(response => response.json())
             .then(
                 (data) => {
@@ -29,7 +30,7 @@ export const EditProfile = () => {
                     setCurrentDog(dogObject)
                 }
             )
-            fetch(`http://localhost:8088/users?id=${pupUserObject.id}`)
+            fetch(`${API}/users?id=${pupUserObject.id}`)
             .then(response => response.json())
             .then(
                 (data) => {
@@ -70,7 +71,7 @@ export const EditProfile = () => {
         }
     
         
-        return fetch(`http://localhost:8088/users/${pupUserObject.id}`, {
+        return fetch(`${API}/users/${pupUserObject.id}`, {
             method: "PUT", 
             headers: {
                 "content-type": "application/json"
@@ -91,7 +92,7 @@ export const EditProfile = () => {
                     ageGroupId: currentDogObject.ageGroupId
                 }
 
-                return fetch(`http://localhost:8088/dogs/${foundDogId}`, {
+                return fetch(`${API}/dogs/${foundDogId}`, {
                     method: "PUT",
                     headers: {
                         "content-type": "application/json"
@@ -110,11 +111,11 @@ export const EditProfile = () => {
     const DeleteProfileButton = (event) => {
         event.preventDefault()
 
-        fetch(`http://localhost:8088/users/${pupUserObject.id}`, {
+        fetch(`${API}/users/${pupUserObject.id}`, {
             method: "DELETE"
 
         })
-        fetch(`http://localhost:8088/dogs/${foundDogId}`, {
+        fetch(`${API}/dogs/${foundDogId}`, {
             method: "DELETE"
         })
         .then(
@@ -145,10 +146,13 @@ export const EditProfile = () => {
 
     return <section className="whole_page">
         <form className="edit_form">
-            <div className="edit_header">Edit Your Profile</div>
+            <div className="edit_header"><b>Edit Your Profile</b></div>
+            <div className="line_container_edit">
+                <div className="line_divider_edit"></div>
+            </div>
             <fieldset className="dogform_info">
-                <label className="form_headers" htmlFor="dog_name">Dog's Name: </label>
-                <input className="form_headers" required autoFocus type="text" value={currentDogObject.name} 
+                <label className="form_headers" htmlFor="dog_name">Dog's Name </label>
+                <input className="form_input" required autoFocus type="text" value={currentDogObject.name} 
                 onChange = {
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -156,8 +160,8 @@ export const EditProfile = () => {
                         setCurrentDog(copy)
                     }
                 }/>
-                <label className="form_headers"  htmlFor="dog_breed">Breed: </label>
-                <input requred autoFocus type="text" value={currentDogObject.breed} 
+                <label className="form_headers"  htmlFor="dog_breed">Breed </label>
+                <input className="form_input" requred autoFocus type="text" value={currentDogObject.breed} 
                 onChange = {
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -165,8 +169,8 @@ export const EditProfile = () => {
                         setCurrentDog(copy)
                     }
                 }/>
-                <label className="form_headers"  htmlFor="age">Age: </label>
-                <select id="age" 
+                <label className="form_headers"  htmlFor="age">Age </label>
+                <select id="age" className="form_input" 
                 onChange={
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -179,8 +183,8 @@ export const EditProfile = () => {
                         ages.map(age => <option value={age.id} key={age.id}>{age.age}</option>)
                     }
                 </select>
-                <label className="form_headers"  htmlFor="size">Size: </label>
-                <select id="size"
+                <label className="form_headers"  htmlFor="size">Size </label>
+                <select id="size" className="form_input" 
                 onChange={
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -193,8 +197,8 @@ export const EditProfile = () => {
                         sizes.map(size => <option value={size.id} key={size.id}>{size.size}</option> )
                     }
                 </select>
-                <label className="form_headers"  htmlFor="energy">Energy Level: </label>
-                <select id="energy"
+                <label className="form_headers"  htmlFor="energy">Energy Level </label>
+                <select id="energy" className="form_input" 
                 onChange={
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
@@ -207,7 +211,7 @@ export const EditProfile = () => {
                         energies.map(energy => <option value={energy.id} key={energy.id}>{energy.energy}</option> )
                     }
                 </select>
-                <label className="form_headers" htmlFor="about_dog">About Me: </label>
+                <label className="form_headers" htmlFor="about_dog">About Me </label>
                 <textarea id="about_dog" className="text_field" value={currentDogObject.aboutMe}
                 onChange={
                     (evt) => {
@@ -228,8 +232,8 @@ export const EditProfile = () => {
                 </div>
             </fieldset>
             <fieldset className="owner_info">
-                <label className="form_headers" htmlFor="owner_name">Your Name: </label>
-                <input required autoFocus type="text" value={currentUserObject.name} 
+                <label className="form_headers" htmlFor="owner_name">Your Name </label>
+                <input required autoFocus type="text" value={currentUserObject.name} className="form_input"
                 onChange={
                     (evt) => {
                         const copy = structuredClone(currentUserObject)
@@ -237,7 +241,7 @@ export const EditProfile = () => {
                         setCurrentUser(copy)
                     }
                 }/>
-                <label className="form_headers" htmlFor="about_owner">About Me: </label>
+                <label className="form_headers" htmlFor="about_owner">About Me </label>
                 <textarea id="about_owner" className="text_field" value={currentUserObject.aboutMe}
                 onChange={
                     (evt) => {
@@ -246,8 +250,8 @@ export const EditProfile = () => {
                         setCurrentUser(copy)
                     }
                 }/>
-                <label className="form_headers" htmlFor="email">Email: </label>
-                <input required autoFocus type="text" value={currentUserObject.email} 
+                <label className="form_headers" htmlFor="email">Email address </label>
+                <input required autoFocus type="text" value={currentUserObject.email} className="form_input"
                 onChange={
                     (evt) => {
                         const copy = structuredClone(currentUserObject)
@@ -255,7 +259,7 @@ export const EditProfile = () => {
                         setCurrentUser(copy)
                     }
                 }/>
-                <label className="form_headers" htmlFor="pupsit">Interested in Pupsit Sharing
+                <label className="form_interested" htmlFor="pupsit">Interested in Pupsit Sharing
                 <input id="pupsit" type="checkbox" checked={currentUserObject.pupSitting? "checked" : ""} //prepopulates with what user choose at registration
                 onChange ={ 
                     () => {

@@ -76,7 +76,7 @@ label {
     font-variant: normal; 
     text-transform: none; 
     background-image: linear-gradient(to right, rgb(54, 77, 194) 0%, rgb(46,68, 177) 50%, rgb(41, 60, 162) 100%); 
-    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    box-shadow: rgb(92, 91, 91) 5px 5px 15px 3px;
     border: 2px solid rgb(41, 60, 162); 
     display: inline-block;
 

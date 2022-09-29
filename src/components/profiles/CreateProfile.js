@@ -32,7 +32,7 @@ import { getAllAgeGroups, getAllDogs, getAllEnergyLevels, getAllSizes } from "..
 import "./EditProfile.css"
 
 
-
+let API = "https://dolphin-app-eblpn.ondigitalocean.app"
 
 export const CreateProfile = () => {
     
@@ -63,7 +63,7 @@ export const CreateProfile = () => {
     
     useEffect(
         () => {
-            fetch(`http://localhost:8088/users/${pupUserObject.id}`)
+            fetch(`${API}/users/${pupUserObject.id}`)
             .then(response => response.json())
             .then(
                 (userObject) => {
@@ -110,7 +110,7 @@ export const CreateProfile = () => {
             aboutMe: user.aboutMe
         }
 
-        return fetch(`http://localhost:8088/users/${pupUserObject.id}`, {
+        return fetch(`${API}/users/${pupUserObject.id}`, {
             method: "PUT", 
             headers: {
                 "content-type": "application/json"
@@ -130,7 +130,7 @@ export const CreateProfile = () => {
                     energyLevelId: dog.energyLevelId,
                     ageGroupId: dog.ageGroupId
                 }
-                return fetch(`http://localhost:8088/dogs`, {
+                return fetch(`${API}/dogs`, {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
@@ -173,10 +173,13 @@ export const CreateProfile = () => {
     else {
         return <section className="whole_page">
         <form className="edit_form">
-               <div className="edit_header">Create Your Profile</div>
+               <div className="edit_header"><b>Create Your Profile</b></div>
+               <div className="line_container_edit">
+                    <div className="line_divider_edit"></div>
+                </div>
                <fieldset className="dogform_info">
                    <label className="form_headers" htmlFor="dog_name">Dog's Name: </label>
-                   <input className="form_headers" required autoFocus type="text" value={dog.name} 
+                   <input className="form_input" required autoFocus type="text" value={dog.name} 
                    onChange = {
                        (evt) => {
                            const copy = structuredClone(dog)
@@ -185,7 +188,7 @@ export const CreateProfile = () => {
                        }
                    }/>
                    <label className="form_headers" htmlFor="dog_breed">Breed: </label>
-                   <input requred autoFocus type="text" value={dog.breed}
+                   <input requred autoFocus type="text" value={dog.breed} className="form_input"
                    onChange = {
                        (evt) => {
                            const copy = structuredClone(dog)
@@ -194,7 +197,7 @@ export const CreateProfile = () => {
                        }
                    }/>
                    <label className="form_headers" htmlFor="age">Age: </label>
-                   <select id="age"
+                   <select id="age" className="form_input"
                    onChange={
                        (evt) => {
                            const copy = structuredClone(dog)
@@ -208,7 +211,7 @@ export const CreateProfile = () => {
                        }
                    </select>
                    <label className="form_headers" htmlFor="size">Size: </label>
-                   <select id="size"
+                   <select id="size" className="form_input"
                    onChange={
                        (evt) => {
                            const copy = structuredClone(dog)
@@ -222,7 +225,7 @@ export const CreateProfile = () => {
                        }
                    </select>
                    <label className="form_headers" htmlFor="energy">Energy Level: </label>
-                   <select id="energy"
+                   <select id="energy" className="form_input"
                    onChange={
                        (evt) => {
                            const copy = structuredClone(dog)
@@ -235,7 +238,7 @@ export const CreateProfile = () => {
                            energies.map(energy => <option value={energy.id} key={energy.id}>{energy.energy}</option> )
                        }
                    </select>
-                   <label className="form_headers_aboutMe" htmlFor="about_dog">About Me: </label>
+                   <label className="form_headers" htmlFor="about_dog">About Me: </label>
                    <textarea id="about_dog" className="text_field" value={dog.aboutMe}
                    onChange={
                        (evt) => {
@@ -255,7 +258,7 @@ export const CreateProfile = () => {
                </fieldset>
                <fieldset className="owner_info">
                    <label className="form_headers" htmlFor="owner_name">Your Name: </label>
-                   <input required autoFocus type="text" value={user.name} 
+                   <input required autoFocus type="text" value={user.name} className="form_input"
                    onChange={
                        (evt) => {
                            const copy = structuredClone(user)
@@ -273,7 +276,7 @@ export const CreateProfile = () => {
                        }
                    }/>
                    <label className="form_headers" htmlFor="email">Email: </label>
-                   <input required autoFocus type="text" value={user.email} 
+                   <input required autoFocus type="text" value={user.email}  className="form_input"
                    onChange={
                        (evt) => {
                            const copy = structuredClone(user)
@@ -281,7 +284,7 @@ export const CreateProfile = () => {
                            setUser(copy)
                        }
                    }/>
-                   <label className="form_headers" htmlFor="pupsit">Interested in Pupsit Sharing
+                   <label className="form_interested" htmlFor="pupsit">Interested in Pupsit Sharing
                    <input id="pupsit" type="checkbox" checked={user.pupSitting? "checked" : ""} //prepopulates with what user choose at registration
                    onChange ={ 
                        () => {

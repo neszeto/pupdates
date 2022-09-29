@@ -8,43 +8,44 @@
     -this function will fetch all requests from api
 */
 
+let API = "https://dolphin-app-eblpn.ondigitalocean.app"
 
 export const getAllDogsAndTheirUsers = () => {
-    return fetch (`http://localhost:8088/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel&_expand=user`)
+    return fetch (`${API}/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel&_expand=user`)
     .then (response => response.json())
 }
 
 export const getAllDogs = () => {
-    return fetch(`http://localhost:8088/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel`)
+    return fetch(`${API}/dogs?_expand=ageGroup&_expand=size&_expand=energyLevel`)
     .then (response => response.json())
 }
 
 export const getAllUsers = () => {
-    return fetch(`http://localhost:8088/users`)
+    return fetch(`${API}/users`)
     .then (response => response.json())
 }
 
 export const getAllRequests = () => {
-    return fetch(`http://localhost:8088/requests`)
+    return fetch(`${API}/requests`)
     .then (response => response.json())
 }
 
 export const getAllSizes = () => {
-    return fetch(`http://localhost:8088/sizes`)
+    return fetch(`${API}/sizes`)
     .then(response => response.json())
 }
 
 export const getAllAgeGroups = () => {
-    return fetch(`http://localhost:8088/ageGroups`)
+    return fetch(`${API}/ageGroups`)
     .then(response => response.json())
 }
 
 export const getAllEnergyLevels = () => {
-    return fetch(`http://localhost:8088/energyLevels`)
+    return fetch(`${API}/energyLevels`)
     .then(response => response.json())
 }
 
 export const getAllParks = () => {
-    return fetch(`http://localhost:8088/dogParks`)
+    return fetch(`${API}/dogParks`)
     .then(response=>response.json())
 }

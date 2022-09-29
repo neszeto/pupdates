@@ -63,14 +63,14 @@ export const FindPupdate = () => {
             <source src={Video_main} type="video/mp4"/>
         </video>
         <div className="welcome">
-            <div className="tag_line">Welcome To</div>
+            <div className="tag_line"><b>Welcome To</b></div>
             <h2 className="banner_words">Pup
                 <font color="#ff8c1a"><i>dates</i></font>
             </h2>
             <div className="line_container_welcome">
                 <div className="line_divider_welcome"></div>
             </div>
-            <div className="tag_line_welcome">Find a playdate for your pup!</div>
+            <div className="tag_line_welcome"><b>Find a playdate for your pup!</b></div>
         </div>
         
         <div className="divider-container">

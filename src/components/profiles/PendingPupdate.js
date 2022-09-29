@@ -29,7 +29,6 @@ import pup_user
 
 import { useEffect, useState } from "react"
 import { getAllDogs, getAllRequests, getAllUsers } from "../ApiManager"
-import { NavBar } from "../nav/NavBar"
 import "./PendingPupdates.css"
 
 

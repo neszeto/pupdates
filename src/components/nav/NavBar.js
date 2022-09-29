@@ -59,7 +59,10 @@ export const NavBar = () => {
                 </li>
                 <li className="navbar_products">
                     <div className="notify-container">
-                    <span className="notify-bubble">{userRequests.length}</span>
+                        {
+                            userRequests.length > 0 ?<span className="notify-bubble">{userRequests.length}</span> : ""
+                        }
+                    
                     <Link className="link" to="/pendingpupdate">Pending Pupdates</Link>
                     </div>
                 </li> 

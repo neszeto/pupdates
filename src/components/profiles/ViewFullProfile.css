@@ -1,16 +1,19 @@
 .feedback {
-    border: 1px dotted #26734d;
-    padding: 1rem;
-    background-color:#79d2a6;
+    border: 1px dotted white;
+    padding: 1.5rem;
+    background-color:rgb(78, 104, 212, 0.8);
     position: absolute;
     top: 40%;
     left: 50%;
-    width: 70%;
+    width: 50%;
     transform: translate(-50%, -50%);
-    animation: 1s slideDown;
-  }
+    animation: 1.5s slideDown;
+    color: white;
+    font-weight: bold; 
+    text-align: center; 
+    
   
-  
+}
   .invisible {
     display: none;
   }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./Register.css"
 
+let API = "https://dolphin-app-eblpn.ondigitalocean.app"
 
 export const Register = () => {
     const [user, setUser] = useState({
@@ -26,7 +27,7 @@ export const Register = () => {
     let navigate = useNavigate()
 
     const registerNewUser = () => {
-        return fetch("http://localhost:8088/users", {
+        return fetch(`${API}/users`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -47,7 +48,7 @@ export const Register = () => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-        return fetch(`http://localhost:8088/users?email=${user.email}`)
+        return fetch(`${API}/users?email=${user.email}`)
             .then(res => res.json())
             .then(response => {
                 if (response.length > 0) {
@@ -73,7 +74,7 @@ export const Register = () => {
                 <div className="register">
                     <div className="register_title">Please Register for Pupdates</div>
                     <fieldset>
-                        <label htmlFor="fullName"> Full Name </label>
+                        <label htmlFor="fullName"> Full name </label>
                         <input onChange={updateUser}
                             type="text" id="name" className="form-control"
                             placeholder="Enter your name" required autoFocus />

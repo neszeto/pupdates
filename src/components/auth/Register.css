@@ -30,17 +30,26 @@
     border-radius: 25px;
     padding: 2%;
     box-shadow: rgb(119, 118, 118) 5px 5px 15px 5px;
+    font-size: 20px; 
     
 }
 
 .form-aboutMe {
     width: 60%;
     height: 100px;
+    border-radius: 5px; 
+    border: solid rgb(229, 226, 226);
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px; 
 }
 
 .form-control {
     width: 40%;
     height: 35px;
+    border-radius: 5px; 
+    border: solid rgb(229, 226, 226);
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px; 
 }
 
 .register_button {
@@ -55,7 +64,7 @@
     font-variant: normal; 
     text-transform: none; 
     background-image: linear-gradient(to right, rgb(54, 77, 194) 0%, rgb(46,68, 177) 50%, rgb(41, 60, 162) 100%); 
-    box-shadow: rgb(57, 56, 56) 5px 5px 15px 5px;
+    box-shadow: rgb(92, 91, 91) 5px 5px 15px 3px;
     border: 2px solid rgb(41, 60, 162); 
     display: inline-block;
     

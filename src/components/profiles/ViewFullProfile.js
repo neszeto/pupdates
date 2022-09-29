@@ -3,6 +3,10 @@ import { useParams } from "react-router-dom"
 import { getAllDogs, getAllUsers } from "../ApiManager"
 import "./ViewFullProfile.css"
 
+let API = "https://dolphin-app-eblpn.ondigitalocean.app"
+
+
+
 export const ViewFullProfile = () => {
     const {dogId} = useParams()
     const [dogs, setDogs] = useState([])
@@ -56,7 +60,7 @@ export const ViewFullProfile = () => {
             recievingDogId: parseInt(dogId)
         }
 
-        fetch(`http://localhost:8088/requests`, {
+        fetch(`${API}/requests`, {
             method: "POST", 
             headers: {
                 "Content-Type": "application/json"
@@ -75,7 +79,7 @@ export const ViewFullProfile = () => {
     return<>
         <div className={`${feedback.includes("Error") ? "error" : "feedback"} ${feedback === "" ? "invisible" : "visible"}`}>{feedback}</div>
         <section className="profile_page">
-            <div className="my_profile">{foundDog?.name}'s Profile</div>
+            <div className="my_profile"><b>{foundDog?.name}'s Profile</b></div>
             <article className="dog_owner">
                 <div className="dog_image">
                     <img className="profile_image" src={foundDog?.image} height="500px" alt=""></img>

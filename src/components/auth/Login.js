@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
+let API = "https://dolphin-app-eblpn.ondigitalocean.app"
 
 export const Login = () => {
     const [email, set] = useState("")
@@ -11,7 +12,7 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        return fetch(`http://localhost:8088/users?email=${email}`)
+        return fetch(`${API}/users?email=${email}`)
             .then(res => res.json())
             .then(foundUsers => {
                 if (foundUsers.length === 1) {
@@ -39,10 +40,10 @@ export const Login = () => {
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail" className="email">Email address </label>
-                        <input type="email"
+                        <input type="email" 
                             value={email}
                             onChange={evt => set(evt.target.value)}
-                            className="email"
+                            className="form-control"
                             placeholder="Email address"
                             required autoFocus />
                     </fieldset>
