@@ -1,7 +1,7 @@
 
 # Pupdates
 
-### *Find a playdate for your pup!*
+### *Pupdates is a playdate scheduling application for your pup!*
 
 ## Application Overview
 This application enables dog owners and their dogs to connect with other owners and their dogs in the Nashville community, with an enhanced goal of creating matches for sharing dog sitting responsibilities when needed (‘Pupsitting’) - eliminating the need for boarding kennels.
@@ -45,4 +45,4 @@ OR register and sign in as a new user
 ## ERD
 <img src="./README_images/ERD.png" />
 
-### Created By Nora Szeto ([Linkedin](www.linkedin.com/in/nora-szeto))
+### Created By Nora Szeto 
