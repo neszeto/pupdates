@@ -53,4 +53,5 @@ OR register and sign in as a new user
 ## ERD
 <img src="./README_images/ERD.png" />
 
-### Created By Nora Szeto <a href="https://www.linkedin.com/in/nora-szeto/" target="_blank">Linkin</a>
+### Created By Nora Szeto 
+### View my <a href="https://www.linkedin.com/in/nora-szeto/" target="_blank">Linkedin</a>
