@@ -1,22 +1,3 @@
-/*MyProfile.js -------------
-
--this page is dependent on pup_user so will need to get that out of localstorage 
-    -const localPupUser = localStorage.getItem("pup_user") 
-    const pupUserObject = JSON.parse(localPupUser)
-IF localStorage contains pup_user, run code below
-    -import getAllDogs() and getAllUsers() from ApiManager
-    -use .find to find the user who's id matches the pup_user.id 
-    -set that userObject into the variable foundUser
-    -use .find to find the dog who's userId matches the pup_user.id
-    -set that dogObject into the variable foundDog
-    -return the html for this page (foundDog.image foundDog.name foundUser.name, )
-        -create a turnary key for pupsit sharing. If pupsit sharing is TRUE: display `interested...` on page. If FALSE: display "" (nothing)
-    -create edit profile button
-        -onClick, navigate to EditProfile.js (interpolate dog.id into url code)
-ELSE return msg that reads "YOUR PROFILE HAS BEEN DELETED"
-
-*/
-
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllDogs, getAllUsers } from "../ApiManager"

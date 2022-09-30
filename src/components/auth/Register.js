@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./Register.css"
 
-let API = "https://dolphin-app-eblpn.ondigitalocean.app"
+let API = "http://localhost:8088"
 
 export const Register = () => {
     const [user, setUser] = useState({

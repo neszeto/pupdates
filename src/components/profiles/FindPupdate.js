@@ -162,21 +162,3 @@ export const FindPupdate = () => {
 }
 
 
-/**FindPupdate.js ---------
-
--create a function named FindPupdate()
--create a useState to house the array of dogs
--create a useEffect that observes initial state and invokes the getAllDogs function from ApiManager
--return the html for this page
-    -map through the array of dogs and create html for a single dog (name, image, information and view full profile button - this button will invoke the function below and set event.target.value as its arguement)
-     -make sure that specific dog's id is stored in value
-
--create a function for when the view full profile button is clicked that accepts one parameter (dogId)
-    -this function should return <ViewFullProfile dogId={dogId}/> prop drilling
-
-
-    
-
-
-
-*/

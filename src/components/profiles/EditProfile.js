@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { getAllAgeGroups, getAllEnergyLevels, getAllSizes } from "../ApiManager"
 import "./EditProfile.css"
 
-let API = "https://dolphin-app-eblpn.ondigitalocean.app"
+let API = "http://localhost:8088"
 
 export const EditProfile = () => {
     let {foundDogId} = useParams()
@@ -297,43 +297,3 @@ export const EditProfile = () => {
 
 
 
-/**EditProfile.js ------------
-
--in ApplicationViews, create a path with :dogId (this was set in the onClick for the edit profile button in MyProfile.js)
--deconstruct the object using useParams()
--create a useState to store current dogObject
--create a useEffect to observe state when dogId changes
-    -when dogId changes, fetch that dog Object with the {dogId} and use the setter function to set that dogObject into state variable
-
--import pup_user from localStorage
-
--create a useState for housing transient state for users input for USERS information. 
-    -create a fetch call on the users array for the specific user who's user id = pup_user.id (`users/{pup_user.id})
-    -use setter function to store into user variable
-
--create update profile button function
-    -create a fetch call to a specific userId 
-    -method should be PUT to update with users updated input
-
-    -create a fetch call to a specific dogId
-    -method should be PUT to update with users updated input
-
-    -include event.preventDefault()
-
-    -navigate users back to their updated profile
-
--create a delete profile button
-    -create a fetch call to the specific userId
-    -method should be DELETE
-
-    -create a fetch call to the specific dogId
-    -method should be DELETE
-
-    -navigate user back to my profile page 
-
-
-    -return the html for the form.
-    -make sure value=dog.name etc to prepopulate all fields with what user has already input
-    -invoke update profile function on button
-    -invoke delete profile function on button
- */

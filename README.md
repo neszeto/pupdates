@@ -1,70 +1,48 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pupdates
 
-## Available Scripts
+### *Find a playdate for your pup!*
 
-In the project directory, you can run:
+## Application Overview
+This application enables dog owners and their dogs to connect with other owners and their dogs in the Nashville community, with an enhanced goal of creating matches for sharing dog sitting responsibilities when needed (‘Pupsitting’) - eliminating the need for boarding kennels.
 
-### `npm start`
+This project is my front end capstone, created in two weeks, after three months of being introduced to front end development. My goals were to incorporate CRUD functionality, gain a deeper understanding of React and build an intuitive and user friendly interface without the use of bootstrapped components. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+* Users can browse/filter/search other user profiles
+* Users can create/edit/delete their profiles
+* Users can send and approve pupdate requests
+* Users can view information about Nashville's local dog parks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="./README_images/instructional.png" />
 
-### `npm test`
+## Technology Used
+<img src="./README_images/cloudinary_logo_blue_0720.png" width="100px" />
+<img src="./README_images/JavaScript.png" width="100px" height="30px"/>
+<img src="./README_images/react.png" width="100px"height="30px"/>
+<img src="./README_images/VSCode.png" width="100px"/>
+<img src="./README_images/JSON.png" width="100px" height="30px"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running This Application
 
-### `npm run build`
+***Disclaimer:** This application uses mock authentication for demonstration purposes. As such, the login and registration are completely insecure and would not be implemented in a professional application.*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  Clone this repository and change to this directory in the terminal.
+```
+git clone git@github.com:neszeto/pupdates.git
+cd pupdates
+```
+2. Start development server
+```
+npm install --save react-router-dom
+npm start
+```
+## Demo User Login
+To view the application as a registered user, please sign in using the following email: **steve@gmail.com**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+OR register and sign in as a new user 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ERD
+<img src="./README_images/ERD.png" />
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Created By Nora Szeto ([Linkedin](www.linkedin.com/in/nora-szeto))

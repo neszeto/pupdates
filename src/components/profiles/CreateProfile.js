@@ -1,38 +1,10 @@
-
-/*CreateProfile.js -----------
-
--create a function called CreateProfile()
--create a useState for housing transient state for user's input for DOG information (name, breed etc). Create default settings for these.
-
--import pup_user from localStorage
-
--create a useState for housing transient state for users input for USERS information. 
-    -create a fetch call on the users array for the specific user who's user id = pup_user.id (`users/{pup_user.id})
-    -use setter function to store into user variable
-
--create function for create profile button
-    -create an object for users to send to API
-    -create a fetch call that performs a PUT function to the users array
-    - .then create another object for dogs to send to API
-    -the userId on this new object will be from the updated user object
-    -create a fetch call that performs a POST function to the dogs array
-    -navigate  users back to their newly created profile 
-
--create the html for the form (include the create profile button) 
-    -make sure value = user.name etc (prepopulate their original inputs)
-    -create onchange events for each field and invoke the appropriate setter function (users or dogs)
-    -when submit button clicked, invoke create profile function above
-
-
-*/
-
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAllAgeGroups, getAllDogs, getAllEnergyLevels, getAllSizes } from "../ApiManager"
 import "./EditProfile.css"
 
 
-let API = "https://dolphin-app-eblpn.ondigitalocean.app"
+let API = "http://localhost:8088"
 
 export const CreateProfile = () => {
     
