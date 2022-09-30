@@ -37,6 +37,14 @@ cd pupdates
 npm install --save react-router-dom
 npm start
 ```
+
+3. Clone the api repository and connect JSON
+```
+git clone git@github.com:neszeto/pupdates-api.git
+cd pupdates-api
+json-server database.json -p 8088 -w
+```
+
 ## Demo User Login
 To view the application as a registered user, please sign in using the following email: **steve@gmail.com**
 
