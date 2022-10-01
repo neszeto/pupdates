@@ -18,8 +18,8 @@ This project is my front end capstone, created in two weeks, after three months 
 
 ## Technology Used
 <img src="./README_images/cloudinary_logo_blue_0720.png" width="100px" />
-<img src="./README_images/JavaScript.png" width="100px" height="30px"/>
-<img src="./README_images/react.png" width="100px"height="30px"/>
+<img src="./README_images/JavaScript.png" width="100px" height="35px"/>
+<img src="./README_images/react.png" width="100px"height="35px"/>
 <img src="./README_images/VSCode.png" width="100px"/>
 <img src="./README_images/JSON.png" width="100px" height="30px"/>
 
