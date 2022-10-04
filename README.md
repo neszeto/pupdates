@@ -50,9 +50,6 @@ To view the application as a registered user, please sign in using the following
 
 OR register and sign in as a new user 
 
-## Demo
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/1562df223d744ff09c7c28a156e7f367" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 ## ERD
 <img src="./README_images/ERD.png" />
 
