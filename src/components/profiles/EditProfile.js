@@ -161,7 +161,7 @@ export const EditProfile = () => {
                     }
                 }/>
                 <label className="form_headers"  htmlFor="dog_breed">Breed </label>
-                <input className="form_input" requred autoFocus type="text" value={currentDogObject.breed} 
+                <input className="form_input" required autoFocus type="text" value={currentDogObject.breed} 
                 onChange = {
                     (evt) => {
                         const copy = structuredClone(currentDogObject)
